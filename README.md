@@ -45,10 +45,11 @@ Things you may want to cover:
 
 
 ### Association
-has_many :buyer_transactions, class_name: 'Transaction', :foreign_key => 'buyer_id'
-has_many :seller_transactions, class_name: 'Transaction', :foreign_key => 'seller_id'
-has many :items
-
+- has_many :buyer_transactions, class_name: 'Transaction', :foreign_key => 'buyer_id'
+- has_many :seller_transactions, class_name: 'Transaction', :foreign_key => 'seller_id'
+- has many :items
+- has one   :cards
+- has one  :address
 
 #itemテーブル
 |Column|Type|Options|
@@ -93,13 +94,14 @@ has many :items
 |address_phone_number|-------|
 
 ##Association
-- has_one: users
+- belongs_to　users
 
-#cardテーブル
+#cardsテーブル
 |user_id|references|null: false foreign_key: true|
 |costomer_id|	integernull: false|	
 |card_id|integer|null: false|
 
-- has_one: users
+##Association
+- belongs_to users
 
 

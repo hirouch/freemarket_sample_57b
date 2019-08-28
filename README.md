@@ -40,17 +40,6 @@ Things you may want to cover:
 |birthdate_yea|string|null: false|
 |birthdate_day|string|null: false|
 |phone_number|string|null: false|
-|address_last_name|string|null: false|
-|address_first_name|integer|null: false|
-|address_last_name_kana|string|null: false|
-|address_first_name_kana|string|null: false|
-|address|string|null: false|
-|address_number|integer|null: false|
-|address_prefecture|integer|null: false|
-|address_name|string|null: false|
-|address_block|string|null: false|
-|address_building|-------|
-|address_phone_number|-------|
 |introduce|text|-------|
 |encrypted_password|string|null: false|
 
@@ -87,3 +76,30 @@ has many :items
 |ancestry|string|-------|
 
 - hasmany :item
+
+
+
+#addressテーブル
+|address_last_name|string|null: false|
+|address_first_name|integer|null: false|
+|address_last_name_kana|string|null: false|
+|address_first_name_kana|string|null: false|
+|address|string|null: false|
+|address_number|integer|null: false|
+|address_prefecture|integer|null: false|
+|address_name|string|null: false|
+|address_block|string|null: false|
+|address_building|-------|
+|address_phone_number|-------|
+
+##Association
+- has_one: users
+
+#cardテーブル
+|user_id|references|null: false foreign_key: true|
+|costomer_id|	integernull: false|	
+|card_id|integer|null: false|
+
+- has_one: users
+
+

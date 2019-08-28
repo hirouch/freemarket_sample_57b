@@ -12,7 +12,7 @@
   height: 1608px;
 }
 .haya-header {
-  width: 834px;
+  width: 100%;
   display: flex;
   height: 128px;
 }
@@ -113,6 +113,9 @@
   width: 343px;
   margin: 24px 0 0;
 }
+.haya-field__kome {
+  color: #888;
+}
 .haya-field .haya-field__hissu {
   background: #ea352d;
   margin: 0 0 0 8px;
@@ -143,8 +146,16 @@
   border: 1px solid #ccc;
   background: #fff;
   line-height: 1.5;
-  height: 131;
+  height: 38%;
+  width: 39%;
 }
 .haya-field__honnin {
   font-size: 16px;
+}
+.hayabtn-1 {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 343px;
+  height: 50px;
 }

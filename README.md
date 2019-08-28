@@ -47,9 +47,9 @@ Things you may want to cover:
 ### Association
 - has_many :buyer_transactions, class_name: 'Transaction', :foreign_key => 'buyer_id'
 - has_many :seller_transactions, class_name: 'Transaction', :foreign_key => 'seller_id'
-- has many :items
-- has one   :cards
-- has one  :address
+- has_many :items
+- has_one   :card
+- has_one  :address
 
 #itemテーブル
 |Column|Type|Options|
@@ -76,7 +76,7 @@ Things you may want to cover:
 |name|string|-------|
 |ancestry|string|-------|
 
-- hasmany :item
+- has_many :item
 
 
 
@@ -94,7 +94,7 @@ Things you may want to cover:
 |address_phone_number|-------|
 
 ##Association
-- belongs_to　users
+- belongs_to　user
 
 #cardsテーブル
 |user_id|references|null: false foreign_key: true|
@@ -102,6 +102,6 @@ Things you may want to cover:
 |card_id|integer|null: false|
 
 ##Association
-- belongs_to users
+- belongs_to user
 
 

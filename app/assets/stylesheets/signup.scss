@@ -1,0 +1,105 @@
+// Place all the styles related to the signup controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  position: relative;
+    min-height: 100%;
+    background: #f5f5f5;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1;
+}
+.haya-main{
+  height: 1608px
+}
+
+.haya-single-main {
+  display: block;
+}
+
+*{
+  background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.haya-single-main__container{
+  height: 1260px;
+  width: 700px;
+  margin: 0 auto;
+  background-color: #fff
+}
+.haya-single-main__container__registration{
+  font-size: 22px;
+    padding: 32px;
+    text-align: center;
+    font-weight: 600;
+  border-bottom: 1px solid #e2e0e0;
+}
+.haya-content{
+  margin: 0px 162.500px 0px 162.500px;
+}
+#new_user{
+  padding: 24px 16px 40px
+}
+.haya-field{
+  height: 70px;
+  width: 343px;
+  margin: 24px 0 0;
+  &__kome{
+  color: #888;
+  }
+.haya-field__hissu{
+  background: #ea352d;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+label{
+  font-weight: 600;
+}
+}
+.haya-input{
+  width: 90%;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  margin: 8px 0 0;
+}
+
+
+.haya-sei-mei{
+  margin-right: 8px;
+  margin: 8px 0 0;
+  padding: 10px 16px 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  height: 38%;
+  width: 39%;
+}
+
+.haya-field__honnin{
+  font-size: 16px;
+}
+
+
+
+.hayabtn-1{
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 343px;
+  height: 50px;
+}
+

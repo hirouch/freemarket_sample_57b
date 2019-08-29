@@ -1,7 +1,11 @@
 .haya-header {
-  display: table;
+  height: 128px;
+  text-align: center;
+  margin: 0;
 }
-.haya-header .haya-header-logo {
+.haya-header__logo {
+  display: inline-block;
+  margin: 40px 0 0;
   width: 185px;
   height: 49px;
   line-height: 49px;
@@ -58,14 +62,5 @@
   color: #ea352d;
 }
 .haya-header #through .progress-status {
-  background: #ea352d;
-}
-.haya-header #through .progress-status_bar {
-  background: #ea352d;
-}
-.haya-header #active {
-  color: #ea352d;
-}
-.haya-header #active .progress-status {
   background: #ea352d;
 }

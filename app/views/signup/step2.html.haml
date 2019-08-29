@@ -1,0 +1,16 @@
+.haya-main
+  = render "shared/sin-user"
+  .haya-phone-main
+    .haya-phone-s
+      .haya-single-main__container__registration 
+        電話番号の確認
+      = form_for @user, url: step3_signup_index_path, method: :get, html: {class: 'phone-number-form'} do |f|
+        .haya-phone-3
+          .haya-pohone-4
+            .haya-phone-5
+              携帯電話携帯電話の番号
+            = f.text_field :nickname, class: "haya-input", :placeholder => "携帯電話の番号を入力"
+          .haya-phon-kome
+            本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+          .haya-sns-form
+            = f.button class:"hayabtn-1" 

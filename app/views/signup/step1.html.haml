@@ -1,0 +1,58 @@
+.haya-main
+  = render "shared/sin-user"
+  .haya-single-main
+    .haya-single-main__container
+      .haya-single-main__container__registration 会員情報入力
+      = form_for @user, url: step2_signup_index_path, method: :get, html: {class: 'first-main__box'} do |f|
+        .haya-content
+          .haya-field
+            = f.label :ニックネーム
+            %spa.haya-field__hissu 必須
+            %br/
+            = f.text_field :nickname, class: "haya-input", :placeholder => "メルカリ太朗"
+          .haya-field
+            = f.label :メールアドレス
+            %spa.haya-field__hissu 必須
+            %br/
+            = f.text_field :email, class: "haya-input", :placeholder => "PC・携帯どちらでも可"
+          .haya-field
+            = f.label :パスワード
+            %spa.haya-field__hissu 必須
+            %br/
+            = f.text_field :password, class: "haya-input", :placeholder => "7文字以上"
+          .haya-field
+            = f.label :パスワード（確認）
+            %spa.haya-field__hissu 必須
+            %br/
+            = f.text_field :password_confirmation, class: "haya-input", :placeholder => "7文字以上"
+          .haya-field
+            .haya-field__honnin
+              本人確認
+            .haya_field__syosai
+              安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+          .haya-field
+            = f.label :お名前（全角）
+            %spa.haya-field__hissu 必須
+            %br/
+            = f.text_field :last_name, class: "haya-sei-mei", :placeholder => "例）山田"
+            = f.text_field :first_name, class: "haya-sei-mei", :placeholder => "例）彩"
+          .haya-field
+            = f.label :お名前かなカナ（全角）
+            %spa.haya-field__hissu 必須
+            %br/
+            = f.text_field :last_name_kana, class: "haya-sei-mei", :placeholder => "例）ヤマダ"
+            = f.text_field :first_name_kana, class: "haya-sei-mei", :placeholder => "例）アヤ"
+          .haya-field
+            = f.label :生年月日
+            %spa.haya-field__hissu 必須
+            %br/
+            = render "shared/birthday"
+          .haya-field__kome
+            ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+        .haya-content
+          .haya-field
+            次へ進むのボタンを押すことにより、利用規約に同意したものとみなします
+          .haya-field
+            = f.button class:"hayabtn-1"
+  = render "shared/signup-footer"
+  

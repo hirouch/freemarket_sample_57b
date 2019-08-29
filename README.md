@@ -98,7 +98,7 @@ Things you may want to cover:
 
 #cardsテーブル
 |user_id|references|null: false foreign_key: true|
-|costomer_id|	integernull: false|	
+|costomer_id|	integernull: false|
 |card_id|integer|null: false|
 
 ##Association

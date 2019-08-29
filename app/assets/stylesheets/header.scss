@@ -1,0 +1,160 @@
+html body {
+  padding: 0px;
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+header {
+  border-bottom: solid 1px rgb(245, 245, 245);
+}
+
+.ichi__top {
+  width: 100%;
+  height: 100px;
+  
+  &__own {
+    width: 1020px;
+    height: 40px;
+    display: flex;
+    margin: auto;
+    padding: 8px 0px;
+    &__left {
+      margin-right: 45px;
+    }
+    &__right {
+      display: flex;
+      position: relative;
+    }
+  }
+  &__two {
+    width: 1020px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    &__left {
+      display: flex;
+      &__category {
+        display: flex;
+        height:44px;
+        line-height: 32px;
+        margin-right: 20px;
+        &__icon {
+          margin-right: 10px;
+        }
+        &__text {
+          font-size: 14px;
+          // font-family: ;
+        }
+      }
+      &__brand {
+        display: flex;
+        height:44px;
+        line-height: 32px;
+        &__icon {
+          margin-right: 10px;
+        }
+        &__text {
+          font-size: 14px;
+          // font-family: ;
+        }
+      }
+
+    }
+    &__right {
+      display: flex;
+      &__nice {
+        display: flex;
+        height:44px;
+        line-height: 32px;
+        margin-right: 20px;
+        display: none;
+        &__icon {
+          margin-right: 10px;
+        }
+        &__text {
+          font-size: 14px;
+          // font-family: ;
+        }
+      }
+      &__news {
+        display: flex;
+        height:44px;
+        line-height: 32px;
+        margin-right: 20px;
+        &__icon {
+          margin-right: 10px;
+        }
+        &__text {
+          font-size: 14px;
+          // font-family: ;
+        }
+      }
+      &__todo {
+        display: flex;
+        height:44px;
+        line-height: 32px;
+        margin-right: 20px;
+        &__icon {
+          margin-right: 10px;
+        }
+        &__text {
+          font-size: 14px;
+          // font-family: ;
+        }
+      }
+      &__mypage {
+        display: flex;
+        height:44px;
+        line-height: 32px;
+        &__icon {
+          margin-right: 10px;
+        }
+        &__text {
+          font-size: 14px;
+          // font-family: ;
+        }
+      }
+    }
+  }
+}
+
+.image__mercari {
+  width: 134px;
+  height: 36px;
+  object-fit: cover;
+
+}
+.image__mypage {
+  width: 32px;
+  height: 32px;
+}
+
+.icon__left {
+  color: red;
+  font-size: 0.8em;
+}
+
+.icon__right {
+  color: #ccc;
+  font-size: 20px;
+}
+
+.search__item {
+  width: 840px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  padding-left: 10px;
+  background-color: rgb(245, 245, 245);
+  border: solid 1px rgb(204, 204, 204);
+}
+.search__icon {
+  position: absolute;
+  right: 15px;
+  height: 40px;
+  line-height: 40px;
+  color: #333;
+}

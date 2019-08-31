@@ -1,0 +1,73 @@
+.kawa-mypage-tab-container{
+  margin:40px 0 0;
+  background-color: white;
+  border-top : solid 1px #FAFAFA;
+  
+  &__head{
+    padding: 0 16px;
+    background: #FAFAFA;
+    font-size: 16px;
+    line-height: 72px;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .kawa-mypage-tabs{
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+
+    .kawa-transaction{
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      border-top: solid 2px red;
+      margin: 0;
+      
+      &__item{
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+
+    .kawa-past_transaction{
+      background-color: #EEEEEE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+
+      &__item{
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .kawa-item-content{  
+    background-color: white;
+    position: relative;
+    
+    &__list{
+      padding: 160px 0 60px;
+      background-repeat: no-repeat;
+      background-position: center 40px;
+      background-size: 78px 85px;
+      text-align: center;
+      font-size: 16px;
+      color:gray;
+      font-weight: bold;
+    }
+
+    &__icon{
+      position: absolute;
+      top:50px;
+      left:260px;
+    }
+  }
+}

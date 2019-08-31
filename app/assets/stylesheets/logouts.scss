@@ -1,3 +1,20 @@
-// Place all the styles related to the logouts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.kawa-log-out-box{
+  background-color: #FFFFFF;
+  height: 179px;
+  width:700px;
+  padding: 64px;
+  box-sizing: border-box;
+  
+  &__button{
+    display: block;
+    width:500px;
+    height: 51px;
+    background-color: #EA352E;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: center;
+    line-height: 3.5;
+    margin: auto;
+    text-decoration: none;
+  }
+}

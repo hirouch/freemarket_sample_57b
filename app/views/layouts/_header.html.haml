@@ -1,0 +1,44 @@
+%header
+  .ichi__top
+    .ichi__top__own
+      .ichi__top__own__left
+        =image_tag src="//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3312594182", class: "image__mercari"
+      .ichi__top__own__right
+        .ichi__top__own__right__input
+          %input{type: "text", class: 'search__item', placeholder:'何かお探しですか？'}
+        .ichi__top__own__right__icon
+          = fa_icon 'search',class: 'search__icon'
+    .ichi__top__two
+      .ichi__top__two__left
+        .ichi__top__two__left__category
+          .ichi__top__two__left__category__icon
+            = fa_icon 'list',class: "icon__left"
+          .ichi__top__two__left__category__text
+            カテゴリーから探す
+        .ichi__top__two__left__brand
+          .ichi__top__two__left__brand__icon
+            = fa_icon 'tag',class: "icon__left"
+          .ichi__top__two__left__brand__text
+            ブランドから探す
+      .ichi__top__two__right
+        .ichi__top__two__right__nice
+          .ichi__top__two__right__nice__icon
+            = fa_icon 'heart',class: "icon__right"
+          .ichi__top__two__right__nice__text
+            いいね！一覧
+        .ichi__top__two__right__news
+          .ichi__top__two__right__news__icon
+            = fa_icon 'bell',class: "icon__right"
+          .ichi__top__two__right__news__text
+            お知らせ
+        .ichi__top__two__right__todo
+          .ichi__top__two__right__todo__icon
+            = fa_icon 'check',class: "icon__right"
+          .ichi__top__two__right__todo__text
+            やることリスト
+        .ichi__top__two__right__mypage
+          .ichi__top__two__right__mypage__icon
+            =image_tag src="//static.mercdn.net/images/member_photo_noimage_thumb.png", class: "image__mypage"
+          .ichi__top__two__right__mypage__text
+            マイページ
+    .ichi__top__three

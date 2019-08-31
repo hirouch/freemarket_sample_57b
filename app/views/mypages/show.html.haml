@@ -1,0 +1,34 @@
+-# =render "shared/red-camera"
+.kawa-top-header
+-#   = render "shared/header"
+%nav.kawa-second-header
+  %ul.kawa-second-header__box
+    -# - breadcrumb :mypage
+    -# = breadcrumbs pretext: "",separator: " &rsaquo; ", class: "bread"
+.kawa-wrapper#kawa-backside
+  .kawa-container.kawa-clearfix
+    = render "shared/side-bar"
+    .kawa-right-content
+      %section.kawa-mypage-user-icon
+        = link_to "", class:"kawa-mypage-icon" do
+          .kawa-mypage-user-icon__image
+            = image_tag "member_photo_noimage_thumb.png" , width:70, height:70, class:"kawa-image"
+          %h2.kawa-mypage-user-icon__name
+            -# = current_user.nickname
+        .kawa-mypage-number
+          .kawa-mypage-number__gedgement
+            評価
+            %span.kawa-mypage-number__gedgement__num
+              0
+          .kawa-mypage-number__number
+            出品数
+            %span.kawa-mypage-number__number__num
+              0
+      .kawa-todo-box
+        = render "shared/mypage-todo"
+      .kawa-mypage-tab-box
+        = render "shared/mypage-tab-container"
+.kawa-toppage-footer__image
+  -# = image_tag 'mercari__footer.jpg', class: 'footer__image__pic', height: '260', width: '100%'
+-# .last-footer
+-#   = render "shared/footer"

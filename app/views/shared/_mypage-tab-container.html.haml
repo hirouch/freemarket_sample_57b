@@ -1,0 +1,15 @@
+%section.kawa-mypage-tab-container
+  %h2.kawa-mypage-tab-container__head
+    購入した商品
+  %ul.kawa-mypage-tabs
+    %li.kawa-transaction
+      %h3.kawa-transaction__item
+        取引中
+    %li.kawa-past_transaction
+      %h3.kawa-past_transaction__item
+        過去の取引
+  .kawa-item-content
+    %ul.kawa-item-content__list
+      取引中の商品がありません
+    .kawa-item-content__icon
+      = image_tag "mercarinothing.jpg", width:220, height:80

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'logouts/show'
+
   get 'profiles/show'
 
   get 'mypages/show'

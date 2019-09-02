@@ -159,6 +159,7 @@
   }
   &__two{
     width: 630px;
+    height: 236px;
     padding: 24px 40px 40px 40px;
     margin: 8px 370px;
     background-color: white;
@@ -172,6 +173,107 @@
     }
     &__submit {
   
+    }
+  }
+
+  &__three {
+    display: flex;
+    justify-content: space-between;
+    width: 710px;
+    margin: 24px 370px 0px 370px;
+    color:  #0099e8;
+    &__left {
+      display: flex;
+      &__icon {
+        margin-right: 5px;
+      }
+      &__item {
+      }
+    }
+    &__right {
+      display: flex;
+      &__item {
+        margin-right: 5px;
+      }
+      &__icon {
+      }
+    }
+  }
+
+  &__four {
+    margin: 24px 370px;
+    padding: 62px 0px 24px 0px;
+    width: 710px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__five {
+    margin: 0px 370px 30px 370px;
+    width: 710px;
+    &__name {
+    font-size: 22px;
+    font-weight: bold;
+    color:  #0099e8;
+    margin-bottom: 8px;
+    }
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      width: 720px;
+      &__item {
+          height: 330px;
+          width: 220px;
+          margin: 0 20px 20px 0;
+          background-color: red;
+        &__image {
+
+        }
+        &__text {
+          height: 78px;
+          width: 188px;
+          padding: 16px 16px;
+          background-color: white;
+          &__top {
+            font-weight: 400;
+            font-size: 16px;
+            height: 50px;
+          }
+          &__bottom {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 8px;
+            &__left {
+              font-size: 17px;
+              font-weight: 600;
+            }
+            &__right {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__six {
+    height: 48px;
+    width: 100vw;
+    border-top: solid 1px #eee;
+    &__box {
+      height: 16px;
+      margin: 0px 210px;
+      padding: 16px 0px;
+      display: flex;
+      &__mercari {
+        margin-right: 10px;
+      }
+      &__icon {
+
+      }
+      &__item {
+        
+      }
     }
   }
 }
@@ -202,4 +304,31 @@
   color: white;
   background: #aaa;
   border: 1px solid #aaa;
+}
+
+.ichi__exhibit__icon__facebook {
+  padding-right: 8px;
+  font-size: 45px;
+  color: #385185;
+}
+
+.ichi__exhibit__four__icon__twitter {
+  padding-right: 8px;
+  font-size: 45px;
+  color: #0099e8;
+}
+
+.ichi__exhibit__four__icon__pinterest {
+  padding-right: 8px;
+  font-size: 45px;
+  color: #aa262a;
+}
+
+.ichi__exhibit__five__image {
+  height: 220px;
+  width: 220px;
+}
+
+.ichi__exhibit__six__icon {
+  margin-right: 10px;
 }

@@ -1,0 +1,334 @@
+.ichi__exhibit {
+  &__own {
+    width: 630px;
+    padding: 24px 40px 40px 40px;
+    margin: 40px 370px 0px 370px;
+    background-color: white;
+    &__title {
+      font-size: 24px;
+      text-align: center;
+      word-wrap: break-word;
+      line-height: 1.4;
+    }
+    &__item {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      &__images {
+        width: 300px;
+        height: 420px;
+        &__top {
+          height: 300px;
+          width: 300px;
+        }
+        &__others {
+          height: 120px;
+          width: 300px;
+          display: flex;
+          flex-wrap: wrap;
+          &__image {
+            height: 60px;
+            width: 60px;
+          }
+        }
+      }
+      &__description {
+        width: 300px;
+        height: 420px;
+        &__text {
+          display: flex;
+          width: 300px;
+          &__left {
+            font-size: 14px;
+            width: 39%;
+            text-align: left;
+            font-weight: 400;
+            background: #fafafa;
+            padding: 8px;
+            border: 1px solid #f5f5f5;
+          }
+          &__right {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #f5f5f5;
+            width: 61%;
+
+            &__name {
+
+            }
+            &__evaluation {
+              display: flex;
+              &__icon {
+                padding-top: 8px;
+              }
+              &__point {
+                padding-top: 8px;
+                margin-right: 16px;
+              }
+              &__lastpoint {
+                padding-top: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__price {
+      width: 620px;
+      height: 50px;
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      
+      &__left {
+        margin-right: 16px;
+        font-size: 50px;
+      }
+      &__center {
+        font-size: 10px;
+      }
+      &__right {
+        font-size: 14px;
+      }
+    }
+    &__purchase {
+      color: white;
+      font-size: 24px;
+      line-height: 60px;
+      margin-top: 16px;
+      background: #ea352d;
+      text-align: center;
+      font-weight: 600;
+    }
+    &__text {
+      padding-top: 32px;
+      width: 620px;
+      font-size: 18px;
+    }
+    &__contents {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+      &__left {
+        display: flex;
+        &__evaluation {
+          display: flex;
+          border: 1px solid #f5f5f5;
+          background: #f5f5f5;
+          padding: 8px 16px;
+          border-radius: 40px;
+          &__icon {
+
+          }
+          &__good {
+            padding-left: 8px;
+          }
+          &__point {
+            padding-left: 8px;
+          }
+        }
+        &__report {
+          display: flex;
+          border: 1px solid #f5f5f5;
+          background: #f5f5f5;
+          padding: 8px 16px;
+          border-radius: 40px;
+          margin-left: 16px;
+          &__icon {
+
+          }
+          &__text {
+            padding-left: 8px;
+          }
+        }
+      }
+      &__right {
+        display: flex;
+        padding-top: 8px;
+        margin-left: 16px;
+        &__icon {
+          color: #0099e8;
+        }
+        &__text {
+          padding-left: 8px;
+          color: #0099e8;
+        }
+      }
+    }
+  }
+  &__two{
+    width: 630px;
+    height: 236px;
+    padding: 24px 40px 40px 40px;
+    margin: 8px 370px;
+    background-color: white;
+    &__text {
+      padding: 8px;
+      font-size: 14px;
+      background: #fff6de;
+    }
+    &__input {
+      
+    }
+    &__submit {
+  
+    }
+  }
+
+  &__three {
+    display: flex;
+    justify-content: space-between;
+    width: 710px;
+    margin: 24px 370px 0px 370px;
+    color:  #0099e8;
+    &__left {
+      display: flex;
+      &__icon {
+        margin-right: 5px;
+      }
+      &__item {
+      }
+    }
+    &__right {
+      display: flex;
+      &__item {
+        margin-right: 5px;
+      }
+      &__icon {
+      }
+    }
+  }
+
+  &__four {
+    margin: 24px 370px;
+    padding: 62px 0px 24px 0px;
+    width: 710px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__five {
+    margin: 0px 370px 30px 370px;
+    width: 710px;
+    &__name {
+    font-size: 22px;
+    font-weight: bold;
+    color:  #0099e8;
+    margin-bottom: 8px;
+    }
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      width: 720px;
+      &__item {
+          height: 330px;
+          width: 220px;
+          margin: 0 20px 20px 0;
+          background-color: red;
+        &__image {
+
+        }
+        &__text {
+          height: 78px;
+          width: 188px;
+          padding: 16px 16px;
+          background-color: white;
+          &__top {
+            font-weight: 400;
+            font-size: 16px;
+            height: 50px;
+          }
+          &__bottom {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 8px;
+            &__left {
+              font-size: 17px;
+              font-weight: 600;
+            }
+            &__right {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__six {
+    height: 48px;
+    width: 100vw;
+    border-top: solid 1px #eee;
+    &__box {
+      height: 16px;
+      margin: 0px 210px;
+      padding: 16px 0px;
+      display: flex;
+      &__mercari {
+        margin-right: 10px;
+      }
+      &__icon {
+
+      }
+      &__item {
+        
+      }
+    }
+  }
+}
+
+.ichi__exhibit__images {
+  width: 60px;
+  height: 60px;
+}
+
+.ichi__evaluation__icon {
+  font-size: 16px;
+}
+
+.ichi__exhibit__message {
+  margin-top: 8px;
+  padding: 10px 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 104px;
+  width: 100%px;
+  width: 610px;
+}
+
+.ichi__exhibit__submit {
+  margin-top: 8px;
+  line-height: 50px;
+  width: 630px;
+  color: white;
+  background: #aaa;
+  border: 1px solid #aaa;
+}
+
+.ichi__exhibit__icon__facebook {
+  padding-right: 8px;
+  font-size: 45px;
+  color: #385185;
+}
+
+.ichi__exhibit__four__icon__twitter {
+  padding-right: 8px;
+  font-size: 45px;
+  color: #0099e8;
+}
+
+.ichi__exhibit__four__icon__pinterest {
+  padding-right: 8px;
+  font-size: 45px;
+  color: #aa262a;
+}
+
+.ichi__exhibit__five__image {
+  height: 220px;
+  width: 220px;
+}
+
+.ichi__exhibit__six__icon {
+  margin-right: 10px;
+}

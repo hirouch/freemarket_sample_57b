@@ -1,0 +1,191 @@
+body {
+  position: relative;
+}
+
+.ichi__main {
+  &__own {
+    background-image: url("https://www-mercari-jp.akamaized.net/assets/img/featured/camp/index/index_keyvisual.png?2394192159");
+    background-size: contain;
+    background-position: center;
+    height: 390px;
+    width: 100vw;    
+  }
+  &__two {
+    width: 100vw;
+    height: 85px;
+    padding: 56px 0px 30px 0px;
+    background-color: #fff;
+    &__category {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+    &__categorys {
+      display: flex;
+      justify-content: center;
+      &__list {
+        background-color: rgb(239, 239, 239);
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 15px;
+        padding: 8px 16px;
+        margin: 10px 0px 0px 10px;
+      }
+    }
+  }
+  &__three {
+    padding-bottom: 82px;
+    &__box {
+      width: 1020px;
+      margin: auto;
+      padding: 42px 0px 18px 0px;
+      &__top {
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        &__title {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 1.4em;
+        }
+        &__more {
+          height: 30px;
+          line-height: 30px;
+        }
+      }
+      &__items {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        &__item {
+          height: 252px;
+          width: 188px;
+          border: solid 1px blue;
+          position: relative;
+          &__image {
+        
+          }
+          &__price {
+            position: absolute;
+            bottom: 70px;
+            left: 0px;
+            padding: 0px 12px;
+            background: rgba(0,0,0,.4);
+            border-radius: 0 14px 14px 0;
+            color: white;
+            font-size: 17px;
+            height: 28px;
+            line-height: 28px;
+          }
+          &__text {
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.ichi__item__image {
+  object-fit: cover;
+  width: 188px;
+}
+
+.ichi__main__four {
+  background-color: blue;
+  // background-image: url();
+  height: 260px;
+  width: 750px;
+  height: 260px;
+  padding: 0 345px;
+  display: flex;
+  justify-content: space-between;
+  &__box {
+    width: 420px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    &__top {
+      color: white;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      height: 24px;
+    }
+    &__center {
+      color: white;
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+    &__bottom {
+      display: flex;
+      align-items: center;
+      width: 420px;
+      height: 68px;
+      &__mercari {
+        height: 68px;
+        width: 68px;
+        margin-right: 20px;
+      }
+      &__apple {
+        width: 152px;
+      }
+      &__google {
+        width: 144px;
+      }
+    }
+  }
+  &__iphon {
+    width: 300px;
+    height: 260px;
+  }
+}
+
+.ichi__mecari__image {
+  width: 68px;
+  height: 68px;
+}
+
+.ichi__iphon__image {
+  width: 300px;
+  height: 260px;
+}
+
+.taka__exhibit {
+  height: 160px;
+  width: 160px;
+  background-color: rgb(234, 53, 45);
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  &__text {
+    height: 22px;
+    width: 160px;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+  }
+  &__camera {
+    height: 54px;
+    width: 60px;
+    margin: 0 50px;
+    padding-top: 8px;
+  }
+}
+
+.ichi__icon__camera {
+  font-size: 56px;
+  color: white;
+}

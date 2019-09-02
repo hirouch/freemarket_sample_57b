@@ -1,13 +1,6 @@
-html body {
-  padding: 0px;
-  margin: 0px;
-  width: 100vw;
-  height: 100vh;
-
-}
-
 header {
-  border-bottom: solid 1px rgb(245, 245, 245);
+  border-bottom: solid 3px rgb(245, 245, 245);
+  background-color: white;
 }
 
 .ichi__top {
@@ -121,28 +114,28 @@ header {
   }
 }
 
-.image__mercari {
+.ichi__image__mercari {
   width: 134px;
   height: 36px;
   object-fit: cover;
 
 }
-.image__mypage {
+.ichi__image__mypage {
   width: 32px;
   height: 32px;
 }
 
-.icon__left {
+.ichi__icon__left {
   color: red;
   font-size: 0.8em;
 }
 
-.icon__right {
+.ichi__icon__right {
   color: #ccc;
   font-size: 20px;
 }
 
-.search__item {
+.ichi__search__item {
   width: 840px;
   height: 40px;
   border-radius: 5px;
@@ -151,10 +144,11 @@ header {
   background-color: rgb(245, 245, 245);
   border: solid 1px rgb(204, 204, 204);
 }
-.search__icon {
+.ichi__search__icon {
   position: absolute;
   right: 15px;
   height: 40px;
   line-height: 40px;
   color: #333;
 }
+

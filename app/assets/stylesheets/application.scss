@@ -1,4 +1,12 @@
 @import "font-awesome";
+
+@import "home";
+@import './mypage-tab-container.scss';
+@import './mypage-todo.scss';
+@import './mypages.scss';
+@import './profiles.scss';
+@import './side-bar';
+@import './mypages.scss';
 @import "./signup.scss";
 @import "./signup-header.scss";
 @import "./signup-footer.scss";
@@ -7,5 +15,4 @@
 @import "footer";
 @import "show";
 @import "exhibit";
-
-
+@import "logouts"

@@ -1,0 +1,12 @@
+-# = render "shared/red-camera"
+.kawa-profile-edit
+  .kawa-profile-edit__title
+    プロフィール
+  .kawa-profile-edit__top-box
+    .kawa-profile-edit__top-box__container
+      = image_tag "member_photo_noimage_thumb.png", class:"kawa-profile-edit__top-box__avator"
+      %input.kawa-profile-edit__top-box__name{placeholder: "nikuname"}
+  .kawa-profile-edit__under-box
+    .kawa-profile-edit__under-box__input
+      =  text_area :profile, :profile, class: "kawa-profile-edit__under-box__input__form",placeholder: "current_user.profile（空であれば定型文を記述してください）" 
+    = link_to "変更する", "" ,{class: "kawa-profile-edit__under-box__submit"}

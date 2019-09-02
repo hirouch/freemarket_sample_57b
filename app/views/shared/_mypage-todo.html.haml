@@ -1,0 +1,40 @@
+%section.kawa-mypage-todo
+  %ul.kawa-mypage-todo__mypage
+    %li
+      %h3.kawa-mypage-todo__mypage__notice
+        お知らせ
+    %li
+      %h3.kawa-mypage-todo__mypage__todo-list
+        やることリスト
+  .kawa-tab-content
+    %ul#kawa-mypage-tab-notification
+      %li.kawa-mypage-tab-notification__link
+        %a.kawa-mypage-item-link
+          .kawa-mypage-item-link__text
+            事務局から個別のメッセージ「ログイン通知」
+          .kawa-mypage-item-link__time
+            %i.kawa-mypage-item-link__time__clock
+              = fa_icon 'clock-o',class:"clock"
+            %span.kawa-mypage-item-link__time__date
+              １日前
+        %i.kawa-angle-right
+          = fa_icon 'angle-right' ,class:"kawa-angle-right"
+
+        .kawa-right-icon
+          = image_tag "mercari_profile.png" , width:45, height:45
+      %li.kawa-mypage-tab-notification__link
+        %a.kawa-mypage-item-link
+          .kawa-mypage-item-link__text
+            《お買い物応援キャンペーン》
+          .kawa-mypage-item-link__time
+            %i.kawa-mypage-item-link__time__clock
+              = fa_icon 'clock-o' ,class:"clock "
+            %span.kawa-mypage-item-link__time__date
+              １日前
+        %i.kawa-angle-right
+          = fa_icon 'angle-right' ,class:"kawa-angle-right"
+        .kawa-right-icon
+          = image_tag "mercari_profile.png" , width:45, height:45
+      %li.kawa-mypage-go-list
+        %a.kawa-mypage-go-list__all
+          一覧を見る

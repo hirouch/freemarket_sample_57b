@@ -1,0 +1,16 @@
+.kawa-top-header
+  = render "layouts/header"
+%nav.kawa-second-header
+  %ul.kawa-second-header__box
+    -# - breadcrumb :logout
+    -# = breadcrumbs pretext: "",separator: " &rsaquo; ", class: "bread"
+.kawa-wrapper#kawa-background
+  .kawa-container.kawa-clearfix
+    = render "shared/side-bar"
+    .kawa-right-content
+      .kawa-right-content__main-box
+        = render "shared/logouts"
+.kawa-toppage-footer__image
+  -# = image_tag 'mercari__footer.jpg', class: 'footer__image__pic', height: '260', width: '100%'
+.kawa-last-footer
+  = render "layouts/footer"

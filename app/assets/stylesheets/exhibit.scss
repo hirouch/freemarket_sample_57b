@@ -1,0 +1,205 @@
+.ichi__exhibit {
+  &__own {
+    width: 630px;
+    padding: 24px 40px 40px 40px;
+    margin: 40px 370px 0px 370px;
+    background-color: white;
+    &__title {
+      font-size: 24px;
+      text-align: center;
+      word-wrap: break-word;
+      line-height: 1.4;
+    }
+    &__item {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      &__images {
+        width: 300px;
+        height: 420px;
+        &__top {
+          height: 300px;
+          width: 300px;
+        }
+        &__others {
+          height: 120px;
+          width: 300px;
+          display: flex;
+          flex-wrap: wrap;
+          &__image {
+            height: 60px;
+            width: 60px;
+          }
+        }
+      }
+      &__description {
+        width: 300px;
+        height: 420px;
+        &__text {
+          display: flex;
+          width: 300px;
+          &__left {
+            font-size: 14px;
+            width: 39%;
+            text-align: left;
+            font-weight: 400;
+            background: #fafafa;
+            padding: 8px;
+            border: 1px solid #f5f5f5;
+          }
+          &__right {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #f5f5f5;
+            width: 61%;
+
+            &__name {
+
+            }
+            &__evaluation {
+              display: flex;
+              &__icon {
+                padding-top: 8px;
+              }
+              &__point {
+                padding-top: 8px;
+                margin-right: 16px;
+              }
+              &__lastpoint {
+                padding-top: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__price {
+      width: 620px;
+      height: 50px;
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      
+      &__left {
+        margin-right: 16px;
+        font-size: 50px;
+      }
+      &__center {
+        font-size: 10px;
+      }
+      &__right {
+        font-size: 14px;
+      }
+    }
+    &__purchase {
+      color: white;
+      font-size: 24px;
+      line-height: 60px;
+      margin-top: 16px;
+      background: #ea352d;
+      text-align: center;
+      font-weight: 600;
+    }
+    &__text {
+      padding-top: 32px;
+      width: 620px;
+      font-size: 18px;
+    }
+    &__contents {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+      &__left {
+        display: flex;
+        &__evaluation {
+          display: flex;
+          border: 1px solid #f5f5f5;
+          background: #f5f5f5;
+          padding: 8px 16px;
+          border-radius: 40px;
+          &__icon {
+
+          }
+          &__good {
+            padding-left: 8px;
+          }
+          &__point {
+            padding-left: 8px;
+          }
+        }
+        &__report {
+          display: flex;
+          border: 1px solid #f5f5f5;
+          background: #f5f5f5;
+          padding: 8px 16px;
+          border-radius: 40px;
+          margin-left: 16px;
+          &__icon {
+
+          }
+          &__text {
+            padding-left: 8px;
+          }
+        }
+      }
+      &__right {
+        display: flex;
+        padding-top: 8px;
+        margin-left: 16px;
+        &__icon {
+          color: #0099e8;
+        }
+        &__text {
+          padding-left: 8px;
+          color: #0099e8;
+        }
+      }
+    }
+  }
+  &__two{
+    width: 630px;
+    padding: 24px 40px 40px 40px;
+    margin: 8px 370px;
+    background-color: white;
+    &__text {
+      padding: 8px;
+      font-size: 14px;
+      background: #fff6de;
+    }
+    &__input {
+      
+    }
+    &__submit {
+  
+    }
+  }
+}
+
+.ichi__exhibit__images {
+  width: 60px;
+  height: 60px;
+}
+
+.ichi__evaluation__icon {
+  font-size: 16px;
+}
+
+.ichi__exhibit__message {
+  margin-top: 8px;
+  padding: 10px 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 104px;
+  width: 100%px;
+  width: 610px;
+}
+
+.ichi__exhibit__submit {
+  margin-top: 8px;
+  line-height: 50px;
+  width: 630px;
+  color: white;
+  background: #aaa;
+  border: 1px solid #aaa;
+}

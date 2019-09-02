@@ -1,0 +1,79 @@
+= render 'layouts/header'
+-# - breadcrumb :information
+-# = render "shared/breadcrumbs"
+%main.kawa-card-main.kawa-container
+  = render 'shared/side-bar'
+  .kawa-card
+    %section.kawa-card-chapter
+      %h2.kawa-card-chapter__font
+        本人情報の登録
+      .kawa-card-signle
+        .kawa-infomation
+          %p.kawa-infomation-font
+            お客さまの本人情報をご登録ください。
+            %br
+            登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+          %p.kawa-infomation-font.kawa-info-right
+            = link_to '', class: 'kawa-infomation-link' do
+              本人確認書類のアップロードについて
+              = fa_icon 'chevron-right', class: "kawa-card-icon"
+        .kawa-from-group
+          %label.kawa-infomation-name
+            お名前
+          .kawa-infomation-text
+            -# #{current_user.nickname}
+            test
+        .kawa-from-group
+          %label.kawa-infomation-name
+            お名前カナ
+          .kawa-infomation-text
+            -# #{current_user.first_name_kana}#{current_user.last_name_kana}
+            test
+        .kawa-from-group
+          %label.kawa-infomation-name
+            生年月日
+          .kawa-infomation-text
+            -# #{current_user.birthday}
+            test
+        .kawa-from-group
+          %label.kawa-infomation-name
+            郵便番号
+          %span.kawa-infomation-good
+            任意
+          -# %input{placeholder:'例））1234567', type:'text', value: current_user.residence.zip_code, class:'input-default'}
+          %input{placeholder:'例））1234567', type:'text', value: 'test', class:'kawa-input-default'}
+        .kawa-from-group
+          %label.kawa-infomation-name
+            都道府県
+          %span.kawa-infomation-good
+            任意
+          %input{placeholder:'--', type:'text', class:'kawa-input-default'}
+        .kawa-from-group
+          %label.kawa-infomation-name
+            市区町村
+          %span.kawa-infomation-good
+            任意
+          -# %input{placeholder:'例））横浜市緑区', type:'text', value: current_user.residence.city, class:'input-default'}
+          %input{placeholder:'例））横浜市緑区', type:'text', value: 'test', class:'kawa-input-default'}
+        .kawa-from-group
+          %label.kawa-infomation-name
+            番地
+          %span.kawa-infomation-good
+            任意
+          -# %input{placeholder:'例））青山1-1', type:'text', value: current_user.residence.address,class:'input-default'}
+          %input{placeholder:'例））青山1-1', type:'text', value: 'test',class:'kawa-input-default'}
+        .kawa-from-group
+          %label.kawa-infomation-name
+            建物名
+          %span.kawa-infomation-good
+            任意
+          %input{placeholder:'例））ビル101', type:'text', class:'kawa-input-default'}
+          %button.kawa-btn-red.kawa-input-default
+            登録する
+          .kawa-card-pay
+          = link_to '', class: "kawa-card-pay__link" do
+            %span.kawa-card-pay__link__font
+              本人情報の登録について
+              = fa_icon 'chevron-right', class: "kawa-card-icon"
+-# = render 'layouts/footer'
+-# = render "shared/red-camer"

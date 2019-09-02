@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   get 'mypages/show'
 
+  get 'mypages/information', to: 'mypages#information'
+
+
   devise_for :users
   resources :signup do
     collection do

@@ -1,0 +1,19 @@
+.haya-header
+  .haya-header__logo
+    = link_to image_tag("https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?273499512",width:"185", height:"49"),"#"
+.haya-sinki-main
+  .haya-sinki-main__1
+    .haya-sinki-main__1__2
+      新規会員登録
+    .haya-sns-field
+      .haya-sns-field__1
+        %a.haya-sns-field__1__email
+          %i.fa.fa-envelope-o
+          メールアドレスで登録する
+        %a.haya-sns-field__1__face
+          = fa_icon "facebook-square"
+          Facebookで登録する
+        %a.haya-sns-field__1__gmail
+          =fa_icon "google"
+          Googleで登録する
+= render "shared/signup-footer"

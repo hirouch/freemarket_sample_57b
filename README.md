@@ -94,7 +94,7 @@ Things you may want to cover:
 |address_phone_number|-------|
 
 ##Association
-- belongs_to　user
+- belongs_to user
 
 #cardsテーブル
 |user_id|references|null: false foreign_key: true|

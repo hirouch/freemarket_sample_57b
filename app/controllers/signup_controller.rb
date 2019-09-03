@@ -24,21 +24,7 @@ class SignupController < ApplicationController
   end
 
   def step4
-    # session[:address_last_name] = user_params[:address_last_name]
-    # session[:address_first_name] = user_params[:address_first_name]
-    # session[:address_last_name_kana] = user_params[:address_last_name_kana]
-    # session[:address_number] = user_params[:address_number]
-    # session[:address_prefecture] = user_params[:address_prefecture]
-    # session[:address_name] = user_params[:address_name]
-    # session[:address_block] = user_params[:address_block]
-    # session[:address_building] = user_params[:address_building]
-    # session[:address_phone_number] = user_params[:address_phone_number]
-    # sign_in User.find(session[:id]) unless user_signed_in?
   end
-
-  # def done
-  #   sign_in User.find(session[:id]) unless user_signed_in?
-  # end
 
     def create
     @user = User.new(

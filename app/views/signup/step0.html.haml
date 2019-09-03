@@ -1,0 +1,28 @@
+.haya-header
+  .haya-header__logo
+    = link_to image_tag("https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?273499512",width:"185", height:"49"),"#"
+.haya-single-main__sns
+  .haya-single-main__sns__1
+    .haya-single-main__sns__1__2
+      アカウントをお持ちでない方はこちら
+    %a.haya-single-main__sns__1__3{:href => "/signup/step1"} 新規会員登録
+  .haya-face
+    .haya-face__1
+      =fa_icon "facebook-square"
+      Facebookでログイン
+    .haya-face__2
+      =fa_icon "google"
+      Googleでログイン
+  .haya-login-form-inner
+    .haya-field-sns
+      %input.haya-field-sns__1
+    .haya-field-sns
+      %input.haya-field-sns__1
+    .haya-form-group-sns
+      %div.hayahaya
+        %iframe.haya-lobobo{:frameborder => "0", :height => "78", :name => "a-bgafe3sxe03j", :role => "presentation", :sandbox => "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", :scrolling => "no", :src => "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1565591531251&size=normal&cb=ogvf3j15h9jl", :width => "304"}    %button.login-submit.btn-default.btn-red{:type => "submit"} ログイン
+    .hayabtn-1-sns 
+      ログイン
+    %a.haya-pasu{:href => "https://www.mercari.com/jp/password/reset/start/"} パスワードをお忘れの方
+= render "shared/signup-footer"
+

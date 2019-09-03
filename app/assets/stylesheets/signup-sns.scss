@@ -1,0 +1,113 @@
+.haya-single-main {
+  display: block;
+}
+
+.haya-single-main__sns{
+  height: 700px;
+  width: 456px;
+  margin: 0 auto;
+  background-color: #fff
+}
+
+.haya-single-main__sns__1{
+  padding: 40px 64px;
+  border-bottom: 1px solid #e2e0e0;
+  &__2{
+    font-size: 14px;
+    text-align: center
+  }
+  &__3{
+    display: block;
+    margin: 8px 0 0;
+    border: 1px solid #0099e8;
+    background: #0099e8;
+    color: #fff;
+    line-height: 40px;
+    text-align: center
+  }
+}
+
+.haya-face{
+  padding: 40px 64px;
+}
+
+.haya-face__1{
+  margin: 0;
+  background: #385185;
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.haya-face__2{
+  margin: 0;
+  background: white;
+    color: black;
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px 0 0 0;
+    border: #979797 solid 1px;
+}
+
+.haya-login-form-inner{
+  height: 456px;
+  width: 100%;
+  display: inline;
+}
+
+.haya-field-sns{
+  height: 70px;
+  width: 100%;
+ &__1{
+  width: 70%;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  display: block;
+  margin: auto
+}
+}
+
+.hayahaya{
+  text-align: center;
+}
+
+.hayabtn-1-sns{
+  background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    display: block;
+    width: 80%;
+    line-height: 48px;
+    font-size: 14px;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 20px 30px 45px;
+}
+
+.haya-form-group-sns{
+  margin: 0 0 20px 0;
+}
+
+.haya-sns-btn{
+  height: 50px;
+  width: 300px
+}

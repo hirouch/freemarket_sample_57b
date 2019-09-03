@@ -1,0 +1,175 @@
+.kawa-infomation{
+  .kawa-infomation-font{
+    margin: 8px 0 0;
+    line-height: 1.5;
+  }
+  .kawa-info-right{
+    text-align: right;
+    .kawa-infomation-link{
+      color: #0099e8;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+        text-decoration-color:  #0099e8;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+.kawa-from-group{
+  margin: 40px 0 0;
+  .kawa-infomation-name{
+    font-weight: 600;
+    display: inline-block;
+  }
+  .kawa-infomation-text{
+    margin: 8px 0 0;
+    line-height: 1.5;
+  }
+  .kawa-infomation-good{
+    background: #ccc;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  .kawa-input-default{
+    width: 100%;
+    margin: 8px 0 0;
+    height: 34px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+  }
+  .kawa-btn-red{
+    margin: 40px 0 0 0;
+    height: 56px;
+    font-size: 14px;
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    border-radius: 0px;
+    cursor: pointer;
+  }
+}
+
+.kawa-container{
+  width: 1020px;
+  margin: 40px auto 0;
+  padding: 0 0 40px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+}
+
+.kawa-card-main{
+  margin: 40px auto 0;
+  width: 100%;
+  max-width: 1020px;
+  padding: 0 0 40px;
+  // @include clearfix();
+  .kawa-card{
+    float: right;
+    width: 700px;
+    .kawa-card-chapter{
+      margin: 0;
+      background: #fff;
+      &__font{
+        font-size: 24px;
+        padding: 14px 24px;
+        border-bottom: 1px solid #f5f5f5;
+        text-align: center;
+      }
+      .kawa-card-signle{
+        padding: 64px;
+        &__box{
+          max-width: 320px;
+          margin: 0 auto;
+          &__font{
+            font-size: 16px;
+          }
+        }
+        .kawa-card-settings{
+          list-style: none;
+          &__box{
+            padding: 24px 0;
+            border-bottom: 1px solid #eee;
+            .kawa-card-content{
+              position: relative;
+              max-width: 320px;
+              margin: 0 auto;
+              .kawa-card-link{
+                margin: 0;
+                background: #ea352d;
+                border: 1px solid #ea352d;
+                color: #fff;
+                width: 100%;
+                line-height: 48px;
+                font-size: 14px;
+                display: block;
+                text-align: center;
+              &:hover{
+                opacity: 0.6;
+                  }
+                &__icon{
+                  margin-right: 16px;
+                }
+              }
+              &__img{
+                width: 49px;
+                height: 15px;
+              }
+              .kawa-card-num{
+                margin: 8px 0 0;
+                font-size: 16px;
+              }
+              .kawa-card-delete{
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 4px 6px;
+                background: #fff;
+                border-radius: 3px;
+                border: 1px solid #ea352d;
+                color: #ea352d;
+              }
+            }
+          }
+        }
+        .kawa-card-pay{
+          &__link{
+          display: block;
+          margin: 40px 0 0;
+          text-align: right;
+          color: #0099e8;
+          text-decoration: none;
+          &:hover{
+            text-decoration: underline;
+            text-decoration-color:  #0099e8;
+            opacity: 0.8;
+          }
+            &__font{
+              vertical-align: middle;
+              .kawa-card-icon{
+                margin: 0 0 0 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.kawa-clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}

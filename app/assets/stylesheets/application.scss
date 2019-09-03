@@ -1,5 +1,5 @@
 @import "font-awesome";
-
+@import "mixin/clearfix";
 @import "home";
 @import './mypage-tab-container.scss';
 @import './mypage-todo.scss';
@@ -25,6 +25,11 @@
 @import "information";
 
 @import "show";
+
+@import "exhibition";
+@import "logouts";
+
+
 @import "exhibit";
 
 @import "logouts";

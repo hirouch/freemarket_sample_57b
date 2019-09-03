@@ -2,6 +2,7 @@ class SignupController < ApplicationController
   
   def step1
     @user = User.new
+    @address = Address.new
   end
 
   def step2
@@ -17,17 +18,12 @@ class SignupController < ApplicationController
   end
 
   def step3
-    session[:last_name] = user_params[:last_name]
-    session[:first_name] = user_params[:first_name]
-    session[:last_name_kana] = user_params[:last_name_kana]
-    session[:first_name_kana] = user_params[:first_name_kana]
+    session[:phone_number] = user_params[:phone_number]
     @user = User.new # 新規インスタンス作成
+    @user.build_address
   end
 
   def step4
-  end
-
-  def done
   end
 
     def create
@@ -36,35 +32,36 @@ class SignupController < ApplicationController
       email: session[:email],
       password: session[:password],
       password_confirmation: session[:password_confirmation],
-      last_name: session[:last_name], 
-      first_name: session[:first_name], 
-      last_name_kana: session[:last_name_kana], 
+      last_name: session[:last_name],
+      first_name: session[:first_name],
+      last_name_kana: session[:last_name_kana],
       first_name_kana: session[:first_name_kana],
       birthdate_year: session[:birthdate_year],
       birthdate_month: session[:birthdate_month],
       birthdate_day: session[:birthdate_day],
       phone_number: session[:phone_number],
-      address_last_name: session[:address_last_name],
-      address_first_name: session[:address_first_name],
-      address_last_name_kana: session[:address_last_name_kana],
-      address_first_name_kana: session[:address_first_name_kana],
-      address_number: session[:address_number],
-      address_prefecture: session[:address_prefecture],
-      address_name: session[:address_name],
-      address_block: session[:address_block],
-      address_building: session[:address_building],
-      address_phone_number: session[:ddress_phone_number],
       introduce: session[:introduce],
       encrypted_password: session[:encrypted_password],
     )
+    @address = Address.new(
+      address_last_name: user_params[:address_last_name],
+      address_first_name: user_params[:address_first_name],
+      address_last_name_kana: user_params[:address_last_name_kana],
+      address_first_name_kana: user_params[:address_first_name_kana],
+      address_number: user_params[:address_number],
+      address_prefecture: user_params[:address_prefecture],
+      address_name: user_params[:address_name],
+      address_block: user_params[:address_block],
+      address_building: user_params[:address_building],
+      address_phone_number: user_params[:ddress_phone_number],
+    )
+    @user.build_address(user_params[:address_attributes]) # 入力値を引数で渡す
     if @user.save
-      　　　# ログインするための情報を保管
-            session[:id] = @user.id
-            redirect_to done_signup_index_path
-          else
-            render '/signup/registration'
-          end
-        end
+        session[:user_id] = @user.id
+        redirect_to new_user_path
+      else
+        render '/signup/step4'
+      end
     end
     private
   # 許可するキーを設定します
@@ -82,17 +79,24 @@ class SignupController < ApplicationController
         :birthdate_month,
         :birthdate_day,
         :phone_number,
-        :address_last_name,
-        :address_first_name,
-        :address_last_name_kana,
-        :address_first_name_kana,
-        :address_number,
-        :address_prefecture,
-        :address_name,
-        :address_block,
-        :address_building,
-        :address_phone_number,
-        :introduce,
-        :encrypted_password,
+        # :introduce,
+        # :encrypted_password,
     )
+end
+
+def addres_params
+  params.require(:address).permit(
+    address_attributes: [:id, :user_id],
+    address_attributes: [:id, :address_last_name],
+    address_attributes: [:id, :address_first_name],
+    address_attributes: [:id, :address_last_name_kana],
+    address_attributes: [:id, :address_first_name_kana],
+    address_attributes: [:id, :address_number],
+    address_attributes: [:id, :address_prefecture],
+    address_attributes: [:id, :address_name],
+    address_attributes: [:id, :address_block],
+    address_attributes: [:id, :address_building],
+    address_attributes: [:id, :address_phone_number],
+  )
+end
 end

@@ -35,17 +35,17 @@
 |------|----|-------|
 |name|string|null:false|
 |image|string|null:false|
-|description|text|-------|
+|description|text|null:false|
 |category|references|foreign_key: true|
+|state|string|null:false|
 |size|string|-------|
 |brand|string|-------|
-|state|string|-------|
-|postage|integer|null:false|
-|region|string|-------|
-|shipping_date|date|null:false|
+|postage|string|null:false|
+|region|string|null:false|
+|shipping_date|string|null:false|
 |price|integer|null:false|
-|seller_id|references|foreign_key|
-|buyer_id|references|foreign_key|
+|seller_id|integer|-------|
+|buyer_id|integer|-------|
 
 ## Association
 - belongs_to :seller, class_name: ‘User’, :foreign_key => ‘seller_id’

@@ -1,6 +1,6 @@
 .haya-field__birthday
   .haya-field__birthday__field
-    %select.haya-step1-select{:name => "year"}>
+    = f.select :birthdate_year do
       %option{:value => ""} -
       %option{:value => "1900"} 1900
       %option{:value => "1901"} 1901
@@ -124,7 +124,7 @@
       %option{:value => "2019"} 2019
       %option{:value => "2020"} 2020
     %spa 年
-    %select.haya-step1-select{:name => "month"}>
+    = f.select :birthdate_month do
       %option{:value => ""} -
       %option{:value => "1"} 1
       %option{:value => "2"} 2
@@ -139,7 +139,7 @@
       %option{:value => "11"} 11
       %option{:value => "12"} 12
     %spa 月
-    %select.haya-step1-select{:name => "day"}>
+    = f.select :birthdate_day do
       %option{:value => ""} -
       %option{:value => "1"} 1
       %option{:value => "2"} 2

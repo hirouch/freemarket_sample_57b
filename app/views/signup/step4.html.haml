@@ -1,5 +1,29 @@
 .haya-cre-main
-  = render "shared/sin-user"
+  .haya-header
+    .haya-header__logo
+      = link_to image_tag("user-header-logo"),"#"
+    %nav.progress
+      %ul.progress-bar
+        %li.through#through
+          会員情報
+          .progress-status
+          .progress-status_bar__1
+        %li.haya-through-1
+          電話番号認証
+          .progress-status__2
+          .progress-status_bar__1
+        %li.haya-through-1
+          お届け先住所入力
+          .progress-status__2
+          .progress-status_bar__1
+        %li.haya-through-1
+          支払い方法
+          .progress-status__2
+          .progress-status_bar__3
+        %li.end#end
+          完了
+          .progress-status
+          .progress-status_bar
   .haya-cre__main
     %section.haya-cre__main__1
       .haya-single-main__container__registration
@@ -66,8 +90,7 @@
             %spa.haya-field__hissu 必須
             %br/
             %input.haya-input カード背面４桁もしくは３桁の番号
-            -# = f.text_field :email, class: "haya-input", :placeholder => "カード背面4桁もしくは3桁の番号"
           .haya-field
-            %button.hayabtn-1{:name => "aaa", :type => "button", :value => "次に進む"}
-            -# = f.submit class:"hayabtn-1", value: "次に進む"
+            %button.hayabtn-1
+              次に進む
     = render "shared/signup-footer"

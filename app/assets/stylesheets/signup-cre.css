@@ -1,36 +1,28 @@
-
-.haya-cre-main{
+.haya-cre-main {
   height: 850px;
 }
-
-.haya-cre__main{
+.haya-cre__main {
   display: block;
   height: 600px;
-  &__1{
-    width: 700px;
-    margin: 0 auto;
-    height: 600px;
-    background-color: white
-    }
 }
-
-.haya-address-from{
+.haya-cre__main__1 {
+  width: 700px;
+  margin: 0 auto;
+  height: 600px;
+  background-color: white;
+}
+.haya-address-from {
   padding: 24px 16px 40px;
   height: 979px;
   margin: 0 150px 0 150px;
 }
-
-
-
-
-.haya-signup-card-list{
+.haya-signup-card-list {
   margin: 10px 0 0 0;
 }
-.haya-cre-image{
+.haya-cre-image {
   display: inline;
 }
-
-.hayaselect-default{
+.hayaselect-default {
   width: 29%;
   height: 50px;
   padding: 10px 16px 8px;
@@ -42,17 +34,15 @@
   margin: 8px 0 0;
   display: inline;
 }
-
-.select-wrap.half{
+.select-wrap.half {
   display: inline;
 }
-.haya-field-cre{
+.haya-field-cre {
   height: 70px;
   width: 343px;
   margin: 24px 0 0;
 }
-
-.progress-status_bar__3{
+.progress-status_bar__3 {
   position: absolute;
   left: 50%;
   top: 25px;
@@ -60,6 +50,6 @@
   display: block;
   width: 100px;
   height: 2px;
-  background:red;
+  background: red;
   z-index: 10;
-  }
+}

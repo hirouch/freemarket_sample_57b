@@ -1,0 +1,180 @@
+= render "layouts/header"
+
+.ichi__main
+  .ichi__main__own
+    
+  .ichi__main__two
+    .ichi__main__two__category
+      人気のカテゴリー
+    .ichi__main__two__categorys
+      .ichi__main__two__categorys__list
+        レディース
+      .ichi__main__two__categorys__list
+        メンズ
+      .ichi__main__two__categorys__list
+        家電・スマホ・カメラ
+      .ichi__main__two__categorys__list
+        おもちゃ・ホビー・グッズ
+
+  .ichi__main__three
+
+    .ichi__main__three__box
+      .ichi__main__three__box__top
+        .ichi__main__three__box__top__title
+          レディース新着アイテム
+        .ichi__main__three__box__top__more
+          もっと見る　＞
+      .ichi__main__three__box__items
+        -@womenitems.each do |item|
+          .ichi__main__three__box__items__item
+            = link_to item_path(item) do
+              .ichi__main__three__box__items__item__image
+              = image_tag src = item.image, class: "ichi__item__image"
+              .ichi__main__three__box__items__item__price
+                ¥
+                = item.price.to_s(:delimited, delimiter: ',')
+              .ichi__main__three__box__items__item__text
+                = item.name
+
+    .ichi__main__three__box
+      .ichi__main__three__box__top
+        .ichi__main__three__box__top__title
+          メンズ新着アイテム
+        .ichi__main__three__box__top__more
+          もっと見る　＞
+      .ichi__main__three__box__items
+        -@menitems.each do |item|
+          .ichi__main__three__box__items__item
+            = link_to item_path(item) do
+              .ichi__main__three__box__items__item__image
+              = image_tag src = item.image, class: "ichi__item__image"
+              .ichi__main__three__box__items__item__price
+                ¥
+                = item.price.to_s(:delimited, delimiter: ',')
+              .ichi__main__three__box__items__item__text
+                = item.name
+      
+    .ichi__main__three__box
+      .ichi__main__three__box__top
+        .ichi__main__three__box__top__title
+          家電・スマホ・カメラ新着アイテム
+        .ichi__main__three__box__top__more
+          もっと見る　＞
+      .ichi__main__three__box__items
+        -@electricalitems.each do |item|
+          = link_to item_path(item) do
+            .ichi__main__three__box__items__item
+              .ichi__main__three__box__items__item__image
+              = image_tag src = item.image, class: "ichi__item__image"
+              .ichi__main__three__box__items__item__price
+                ¥
+                = item.price.to_s(:delimited, delimiter: ',')
+              .ichi__main__three__box__items__item__text
+                = item.name
+
+    .ichi__main__three__box
+      .ichi__main__three__box__top
+        .ichi__main__three__box__top__title
+          おもちゃ・ホビー・グッズ新着アイテム
+        .ichi__main__three__box__top__more
+          もっと見る　＞
+      .ichi__main__three__box__items
+        -@toyitems.each do |item|
+          = link_to item_path(item) do
+            .ichi__main__three__box__items__item
+              .ichi__main__three__box__items__item__image
+              = image_tag src = item.image, class: "ichi__item__image"
+              .ichi__main__three__box__items__item__price
+                ¥
+                = item.price.to_s(:delimited, delimiter: ',')
+              .ichi__main__three__box__items__item__text
+                = item.name
+
+  .ichi__main__two
+    .ichi__main__two__category
+      人気のブランド
+    .ichi__main__two__categorys
+      .ichi__main__two__categorys__list
+        シャネル
+      .ichi__main__two__categorys__list
+        ルイヴィトン
+      .ichi__main__two__categorys__list
+        シュプリーム
+      .ichi__main__two__categorys__list
+        ナイキ
+  .ichi__main__three
+    .ichi__main__three__box
+      .ichi__main__three__box__top
+        .ichi__main__three__box__top__title
+          シャネル新着アイテム
+        .ichi__main__three__box__top__more
+          もっと見る　＞
+      .ichi__main__three__box__items
+        -@chanelitems.each do |item|
+          = link_to item_path(item) do
+            .ichi__main__three__box__items__item
+              .ichi__main__three__box__items__item__image
+              = image_tag src = item.image, class: "ichi__item__image"
+              .ichi__main__three__box__items__item__price
+                ¥
+                = item.price.to_s(:delimited, delimiter: ',')
+              .ichi__main__three__box__items__item__text
+                = item.name
+      
+    .ichi__main__three__box
+      .ichi__main__three__box__top
+        .ichi__main__three__box__top__title
+          ルイヴィトン新着アイテム
+        .ichi__main__three__box__top__more
+          もっと見る　＞
+      .ichi__main__three__box__items
+        -@louisvuittonitems.each do |item|
+          = link_to item_path(item) do
+            .ichi__main__three__box__items__item
+              .ichi__main__three__box__items__item__image
+              = image_tag src = item.image, class: "ichi__item__image"
+              .ichi__main__three__box__items__item__price
+                ¥
+                = item.price.to_s(:delimited, delimiter: ',')
+              .ichi__main__three__box__items__item__text
+                = item.name
+
+    .ichi__main__three__box
+      .ichi__main__three__box__top
+        .ichi__main__three__box__top__title
+          シュプリーム新着アイテム
+        .ichi__main__three__box__top__more
+          もっと見る　＞
+      .ichi__main__three__box__items
+        -@supremeitems.each do |item|
+          = link_to item_path(item) do
+            .ichi__main__three__box__items__item
+              .ichi__main__three__box__items__item__image
+              = image_tag src = item.image, class: "ichi__item__image"
+              .ichi__main__three__box__items__item__price
+                ¥
+                = item.price.to_s(:delimited, delimiter: ',')
+              .ichi__main__three__box__items__item__text
+                = item.name
+
+    .ichi__main__three__box
+      .ichi__main__three__box__top
+        .ichi__main__three__box__top__title
+          ナイキ新着アイテム
+        .ichi__main__three__box__top__more
+          もっと見る　＞
+      .ichi__main__three__box__items
+        -@nikeitems.each do |item|
+          = link_to item_path(item) do
+            .ichi__main__three__box__items__item
+              .ichi__main__three__box__items__item__image
+              = image_tag src = item.image, class: "ichi__item__image"
+              .ichi__main__three__box__items__item__price
+                ¥
+                = item.price.to_s(:delimited, delimiter: ',')
+              .ichi__main__three__box__items__item__text
+                = item.name
+
+= render "shared/footertop"
+= render "layouts/footer"
+= render "layouts/item_exhibit"

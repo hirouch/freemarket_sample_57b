@@ -58,13 +58,14 @@ body {
       }
       &__items {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: 15px;
         &__item {
           height: 252px;
           width: 188px;
-          border: solid 1px blue;
+          box-shadow: 0 2px 4px rgba(0,0,0,.18);
           position: relative;
+          margin-bottom: 20px;
           &__image {
         
           }
@@ -81,6 +82,7 @@ body {
             line-height: 28px;
           }
           &__text {
+            padding: 10px 10px;
 
           }
         }
@@ -91,7 +93,7 @@ body {
 
 .ichi__item__image {
   object-fit: cover;
-  width: 188px;
+  width: 186px;
   height: 188px;
   object-fit: contain;
 }

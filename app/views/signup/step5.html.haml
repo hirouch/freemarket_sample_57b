@@ -19,11 +19,10 @@
         %li.haya-through-1
           支払い方法
           .progress-status__2
-          .progress-status_bar__1
+          .progress-status_bar__3
         %li.haya-through-1
           完了
           .progress-status__2
-          .progress-status_bar__1
   .haya-sinki-main
     .haya-sinki-main__1
       .haya-sinki-main__1__2
@@ -32,5 +31,6 @@
         ありがとうございます。
         %br/
         会員登録が完了しました。
-      %button.haya-merukari-btn{:onclick => "location.href='./index.html'"} メルカリを始める
+      -# = button_to "メルカリを始める", controller: 'home', action: 'top', class: 'haya-merukari-btn'
+      %button.haya-merukari-btn{:onclick => "location.href='./top.html'"} メルカリを始める
 

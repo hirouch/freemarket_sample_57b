@@ -19,7 +19,10 @@ class ItemsController < ApplicationController
   end
 
   def show
-    
+    @item = Item.find(params[:id])
+    @selleritems = Item.where(seller_id: @item.seller_id).order(id: "DESC").limit(6)
+    @branditems = Item.where(brand: @item.brand).order(id: "DESC").limit(6)
+    @user = User.find(@item.seller_id)
   end
 
   def edit

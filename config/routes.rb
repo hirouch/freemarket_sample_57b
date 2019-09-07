@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'information/show'
+
   get 'logouts/show'
 
   get 'profiles/show'
@@ -24,9 +26,11 @@ Rails.application.routes.draw do
   root to: 'home#top'
 
   resources :items
-
-  resources :maypages do
-    resource :profile ,only: [:show]
-  end
   
+  resource :mypages do
+    resource :profile ,only: [:show]
+    resource :logout ,only: [:show]
+    resource :information ,only: [:show]
+  end
+
 end

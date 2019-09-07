@@ -9,6 +9,7 @@ class CreateItems < ActiveRecord::Migration[5.0]
       t.string :size
       t.string :brand
       t.string :postage, null: false
+      t.string :shipping_method
       t.string :region, null: false
       t.string :shipping_date, null: false
       t.integer :price, null: false

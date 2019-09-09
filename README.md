@@ -51,6 +51,16 @@
 - belongs_to :seller, class_name: ‘User’, :foreign_key => ‘seller_id’
 - belongs_to :buyer, class_name: ‘User’, :foreign_key => ‘buyer_id’
 
+## imagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|url|string|null: false|
+|item_id|integer|null: false, foreign_key: true|
+
+## association
+- belongs_to :item
+
 ## categoriesテーブル
 
 |Column|Type|Options|
@@ -58,6 +68,7 @@
 |name|string|-------|
 |ancestry|string|-------|
 
+## association
 - has_many :item
 
 

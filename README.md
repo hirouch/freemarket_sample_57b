@@ -47,7 +47,7 @@
 |seller_id|integer|-------|
 |buyer_id|integer|-------|
 
-## Association
+### Association
 - belongs_to :seller, class_name: ‘User’, :foreign_key => ‘seller_id’
 - belongs_to :buyer, class_name: ‘User’, :foreign_key => ‘buyer_id’
 
@@ -58,7 +58,7 @@
 |url|string|null: false|
 |item_id|integer|null: false, foreign_key: true|
 
-## association
+### association
 - belongs_to :item
 
 ## categoriesテーブル
@@ -68,9 +68,8 @@
 |name|string|-------|
 |ancestry|string|-------|
 
-## association
+### association
 - has_many :item
-
 
 
 ## addressesテーブル
@@ -100,7 +99,7 @@
 |costomer_id|	integernull: false|
 |card_id|integer|null: false|
 
-## Association
+### Association
 - belongs_to user
 
 

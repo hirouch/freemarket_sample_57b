@@ -68,3 +68,10 @@ gem "font-awesome-rails"
 gem 'devise'
 gem 'erb2haml'
 gem 'ancestry'
+
+gem 'enum_help'
+gem 'rails-i18n'
+
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog-aws'

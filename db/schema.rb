@@ -10,22 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190904073859) do
+ActiveRecord::Schema.define(version: 20190910024737) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
-    t.string   "address_last_name",                   null: false
-    t.string   "address_first_name",                  null: false
-    t.string   "address_last_name_kana",              null: false
-    t.string   "address_first_name_kana",             null: false
-    t.string   "address_number",                      null: false
-    t.integer  "address_prefecture",      default: 0, null: false
-    t.string   "address_name",                        null: false
-    t.string   "address_block",                       null: false
+    t.string   "address_last_name",                     null: false
+    t.string   "address_first_name",                    null: false
+    t.string   "address_last_name_kana",                null: false
+    t.string   "address_first_name_kana",               null: false
+    t.string   "address_number",                        null: false
+    t.string   "address_prefecture",      default: "0", null: false
+    t.string   "address_name",                          null: false
+    t.string   "address_block",                         null: false
     t.string   "address_building"
     t.string   "address_phone_number"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.index ["user_id"], name: "index_addresses_on_user_id", using: :btree
   end
 
@@ -45,24 +45,30 @@ ActiveRecord::Schema.define(version: 20190904073859) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "item_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "item_id",    null: false
+    t.string   "image",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_item_images_on_item_id", using: :btree
+  end
+
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                          null: false
-    t.string   "image",                         null: false
-    t.text     "description",     limit: 65535, null: false
-    t.integer  "category_id"
-    t.string   "state",                         null: false
+    t.integer  "category_id",                 null: false
+    t.string   "name",                        null: false
+    t.text     "description",   limit: 65535, null: false
+    t.integer  "price",                       null: false
+    t.integer  "status",                      null: false
+    t.integer  "delivery_cost",               null: false
+    t.integer  "delivery_way",                null: false
+    t.integer  "prefecture_id",               null: false
+    t.integer  "delivery_date",               null: false
     t.string   "size"
     t.string   "brand"
-    t.string   "postage",                       null: false
-    t.string   "shipping_method"
-    t.string   "region",                        null: false
-    t.string   "shipping_date",                 null: false
-    t.integer  "price",                         null: false
     t.integer  "seller_id"
     t.integer  "buyer_id"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.index ["category_id"], name: "index_items_on_category_id", using: :btree
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -90,5 +96,5 @@ ActiveRecord::Schema.define(version: 20190904073859) do
 
   add_foreign_key "addresses", "users"
   add_foreign_key "cards", "users"
-  add_foreign_key "items", "categories"
+  add_foreign_key "item_images", "items"
 end

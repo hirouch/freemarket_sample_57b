@@ -13,6 +13,15 @@ class ItemsController < ApplicationController
   end
 
   def new
+    # if user_signed_in?
+      # @item = Item.new
+      # 5.times{@item.images.build}
+    # else
+    #   redirect_to new_user_session_path
+    # end
+    @item = Item.new
+    @parents = Category.where(ancestry: nil) #Category.where(ancestry = ?, "nil")
+    # @item.item_images.build
   end
 
   def create

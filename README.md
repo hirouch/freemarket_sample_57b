@@ -33,30 +33,30 @@
 
 |Column|Type|Options|
 |------|----|-------|
+|item_image|reference|foreign_key:true, null:false|
+|category|reference|foreign_key: true, null: false|
 |name|string|null:false|
-|image|string|null:false|
 |description|text|null:false|
-|category|references|foreign_key: true|
-|state|string|null:false|
+|status|string|null:false|
 |size|string|-------|
 |brand|string|-------|
 |postage|string|null:false|
 |region|string|null:false|
 |shipping_date|string|null:false|
 |price|integer|null:false|
-|seller_id|integer|-------|
+|seller_id|integer|null: false|
 |buyer_id|integer|-------|
 
 ### Association
 - belongs_to :seller, class_name: ‘User’, :foreign_key => ‘seller_id’
 - belongs_to :buyer, class_name: ‘User’, :foreign_key => ‘buyer_id’
 
-## imagesテーブル
+## item_imagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|url|string|null: false|
-|item_id|integer|null: false, foreign_key: true|
+|item_id|reference|foreign_key: true, null: false, type: :bigint|
+|image|string|null: false|
 
 ### association
 - belongs_to :item
@@ -65,11 +65,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|-------|
+|name|string|null: false|
 |ancestry|string|-------|
 
 ### association
-- has_many :item
+- has_many :items
 
 
 ## addressesテーブル

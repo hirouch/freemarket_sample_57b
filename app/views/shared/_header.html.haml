@@ -15,12 +15,21 @@
             = fa_icon 'list',class: "ichi__icon__left"
           .ichi__top__two__left__category__text
             カテゴリーから探す
+
+          .ichi__categories
+            .ichi__categories__parent
+              -@parents.each do |parent|
+                = link_to "#{parent.name}", items_path, class: "ichi__category", id: "#{parent.id}"
+            .ichi__caetgories__children
+            .ichi__caetgories__grandchildren
+        
         .ichi__top__two__left__brand
           .ichi__top__two__left__brand__icon
             = fa_icon 'tag',class: "ichi__icon__left"
           .ichi__top__two__left__brand__text
             ブランドから探す
       .ichi__top__two__right
+      -if user_signed_in?
         .ichi__top__two__right__nice
           .ichi__top__two__right__nice__icon
             = fa_icon 'heart',class: "ichi__icon__right"
@@ -36,9 +45,63 @@
             = fa_icon 'check',class: "ichi__icon__right"
           .ichi__top__two__right__todo__text
             やることリスト
-        .ichi__top__two__right__mypage
+        .ichi__top__two__right__mypage 
           .ichi__top__two__right__mypage__icon
             =image_tag src="member_photo.png", class: "ichi__image__mypage"
           .ichi__top__two__right__mypage__text
             マイページ
-    .ichi__top__three
+          .ichi__top__two__right__mypage__profile
+            .ichi__top__two__right__mypage__profile__own
+              =image_tag src="member_photo.png", class: "ichi__image__mypage__fadeout"
+            .ichi__top__two__right__mypage__profile__two
+              .ichi__top__two__right__mypage__profile__two__name
+                こうたろう
+              .ichi__top__two__right__mypage__profile__two__status
+                評価：０　出品数：０
+              .ichi__top__two__right__mypage__profile__two__price
+                .ichi__top__two__right__mypage__profile__two__price__text
+                  売上金
+                .ichi__top__two__right__mypage__profile__two__price__stock
+                  ¥0 ＞
+              .ichi__top__two__right__mypage__profile__two__point
+                .ichi__top__two__right__mypage__profile__two__point__text
+                  ポイント
+                .ichi__top__two__right__mypage__profile__two__point__stock
+                  P0 ＞
+            .ichi__top__two__right__mypage__profile__three
+              .ichi__top__two__right__mypage__profile__three__link
+                .ichi__top__two__right__mypage__profile__three__link__text
+                  いいね！一覧
+                .ichi__top__two__right__mypage__profile__three__link__mark
+                  ＞
+              .ichi__top__two__right__mypage__profile__three__link
+                .ichi__top__two__right__mypage__profile__three__link__text
+                  出品した商品 - 出品中
+                .ichi__top__two__right__mypage__profile__three__link__mark
+                  ＞
+              .ichi__top__two__right__mypage__profile__three__link
+                .ichi__top__two__right__mypage__profile__three__link__text
+                  出品した商品 - 取引中
+                .ichi__top__two__right__mypage__profile__three__link__mark
+                  ＞
+              .ichi__top__two__right__mypage__profile__three__link
+                .ichi__top__two__right__mypage__profile__three__link__text
+                  出品した商品 - 売却済み
+                .ichi__top__two__right__mypage__profile__three__link__mark
+                  ＞
+              .ichi__top__two__right__mypage__profile__three__link
+                .ichi__top__two__right__mypage__profile__three__link__text
+                  購入した商品 - 取引中
+                .ichi__top__two__right__mypage__profile__three__link__mark
+                  ＞
+              .ichi__top__two__right__mypage__profile__three__link
+                .ichi__top__two__right__mypage__profile__three__link__text
+                  購入した商品 - 過去の取引
+                .ichi__top__two__right__mypage__profile__three__link__mark
+                  ＞
+      -else
+        .ichi__top__two__right__sign
+          .ichi__top__two__right__sign__up
+            = link_to "新規会員登録", step00_signup_index_path, class: "ichi__signup__link"
+          .ichi__top__two__right__sign__login
+            = link_to "ログイン", new_user_session_path, class: "ichi__login__link"

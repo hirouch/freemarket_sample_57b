@@ -34,6 +34,7 @@ header {
         height:44px;
         line-height: 32px;
         margin-right: 20px;
+        position: relative;
         &__icon {
           margin-right: 10px;
         }
@@ -58,18 +59,16 @@ header {
     }
     &__right {
       display: flex;
+      width: 300px;
       &__nice {
         display: flex;
         height:44px;
         line-height: 32px;
         margin-right: 20px;
+        font-size: 14px;
         display: none;
         &__icon {
           margin-right: 10px;
-        }
-        &__text {
-          font-size: 14px;
-          // font-family: ;
         }
       }
       &__news {
@@ -77,12 +76,9 @@ header {
         height:44px;
         line-height: 32px;
         margin-right: 20px;
+        font-size: 14px;
         &__icon {
           margin-right: 10px;
-        }
-        &__text {
-          font-size: 14px;
-          // font-family: ;
         }
       }
       &__todo {
@@ -90,24 +86,92 @@ header {
         height:44px;
         line-height: 32px;
         margin-right: 20px;
+        font-size: 14px;
         &__icon {
           margin-right: 10px;
-        }
-        &__text {
-          font-size: 14px;
-          // font-family: ;
         }
       }
       &__mypage {
         display: flex;
         height:44px;
         line-height: 32px;
+        font-size: 14px;
+        position: relative;
         &__icon {
           margin-right: 10px;
         }
-        &__text {
-          font-size: 14px;
-          // font-family: ;
+        &__profile {
+          position: absolute;
+          top: 42px;
+          right: 0px;
+          width: 300px;
+          background-color: white;
+          border: solid 1px rgb(230, 230, 230);
+          display: none;
+          &__own {
+            background-image:url('');
+            position: relative;
+            height: 80px;
+            width: 300px;
+            background-color: red;
+          }
+          &__two {
+            width: 300px;
+            text-align: center;
+            &__name {
+              padding-top: 15px;
+            }
+            &__status {
+              padding: 0px 0px;
+            }
+            &__price {
+              background-color: rgb(245, 245, 245);
+              border-top: solid 1px rgb(230, 230, 230);
+              border-left: solid 1px rgb(230, 230, 230);
+              border-right: solid 1px rgb(230, 230, 230);
+              width: 270px;
+              margin: auto;
+              padding: 5px 5px;
+              display: flex;
+              justify-content: space-between;
+            }
+            &__point {
+              background-color: rgb(245, 245, 245);
+              border: solid 1px rgb(230, 230, 230);
+              width: 270px;
+              margin: auto;
+              padding: 5px 5px;
+              display: flex;
+              justify-content: space-between;
+            }
+          }
+          &__three {
+            margin-top: 15px;
+            &__link {
+              border-top: solid 1px rgb(230, 230, 230);
+              display: flex;
+              justify-content: space-between;
+              padding: 6px 10px;
+            }
+          }
+        }
+      }
+      &__sign {
+        display: flex;
+        justify-content: space-between;
+        height:32px;
+        line-height: 32px;
+        float: right;
+        &__up {
+          background-color: red;
+          border-radius: 5px;
+          padding: 0px 10px;
+          margin-right: 10px;
+        }
+        &__login {
+          border-radius: 5px;
+          padding: 0px 10px;
+          border: solid 1px #0033FF;
         }
       }
     }
@@ -123,6 +187,16 @@ header {
 .ichi__image__mypage {
   width: 32px;
   height: 32px;
+  border-radius: 50%;
+}
+
+.ichi__image__mypage__fadeout {
+  position: absolute;
+  top: 30px;
+  left: 120px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
 .ichi__icon__left {
@@ -152,3 +226,70 @@ header {
   color: #333;
 }
 
+.ichi__categories {
+  position: relative;
+  z-index: 1;
+  position: absolute;
+  top: 42px;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ichi__categories__parent{
+  display: none;
+}
+
+.ichi__category {
+  text-decoration: none;
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  width: 192px;
+  padding: 0px 16px;
+  color: black;
+}
+
+.ichi__red__category {
+  background-color: red;
+  color: white;
+}
+
+.child_category {
+  text-decoration: none;
+  z-index: 1;
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  width: 190px;
+  padding: 0px 16px;
+  color: black;
+}
+
+.ichi_gray_category {
+  background-color: rgb(240, 240, 240);
+}
+
+.grand_child_category {
+  text-decoration: none;
+  z-index: 1;
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  width: 220px;
+  padding-left: 16px;
+  color: black;
+}
+
+.ichi__signup__link {
+  text-decoration: none;
+  color: white;
+}
+
+.ichi__login__link {
+  text-decoration: none;
+  color: #1E90FF;
+}

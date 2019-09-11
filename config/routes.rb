@@ -26,11 +26,14 @@ Rails.application.routes.draw do
   root to: 'home#top'
 
   resources :items
+  resources :categories, only: [:index]
   
   resource :mypages do
     resource :profile ,only: [:show]
     resource :logout ,only: [:show]
     resource :information ,only: [:show]
   end
+
+  
 
 end

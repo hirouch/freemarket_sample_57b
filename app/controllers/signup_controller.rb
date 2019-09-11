@@ -51,9 +51,9 @@ class SignupController < ApplicationController
     @user.build_address(user_params[:address_attributes]) # 入力値を引数で渡す
     if @user.save
         session[:user_id] = @user.id
-        redirect_to step4_signup_index_path
+        redirect_to new_credit_card_path
       else
-        render '/signup/step4'
+        render '/signup/step1'
       end
     end
     private

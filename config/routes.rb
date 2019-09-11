@@ -26,14 +26,28 @@ Rails.application.routes.draw do
   root to: 'home#top'
 
   resources :items
+<<<<<<< Updated upstream
   resources :categories, only: [:index]
   
+=======
+
+>>>>>>> Stashed changes
   resource :mypages do
     resource :profile ,only: [:show]
     resource :logout ,only: [:show]
     resource :information ,only: [:show]
   end
 
+<<<<<<< Updated upstream
   
+=======
+  resources :credit_cards, only: [:new, :show] do
+    collection do
+      post 'show', to: 'credit_cards#show'
+      post 'pay', to: 'credit_cards#pay'
+      post 'delete', to: 'credit_cards#delete'
+    end
+  end
+>>>>>>> Stashed changes
 
 end

@@ -1,5 +1,8 @@
 class ItemsController < ApplicationController
 
+  before_action :set_item, only: [:show, :edit, :destroy, :my_item, :buy_confirm]
+  # before_action :authenticate_user!, only: [:new]
+
   def index
     # @items = Item.all.order(id: "DESC").limit(10)
     @womenitems = Item.where(category_id: 20..85).order(id: "DESC").limit(10)
@@ -21,10 +24,25 @@ class ItemsController < ApplicationController
     # end
     @item = Item.new
     @parents = Category.where(ancestry: nil) #Category.where(ancestry = ?, "nil")
-    # @item.item_images.build
+    @item.item_images.build
+    
   end
 
   def create
+    @item = Item.new(item_params)
+    binding.pry
+    @parents = Category.where(ancestry: nil)
+    @item.save
+    # if @item.save 
+      # && new_image_params[:images][0] != ""
+      # new_image_params[:images].each do |image|
+      #   @item.item_images.create(image: image, item_id: @item.id)
+      # end
+      redirect_to root_path
+    # else
+    #   @item.item_images.build
+    #   render :new
+    # end
   end
 
   def show
@@ -41,6 +59,14 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+  end
+
+  def item_params
+    params.require(:item).permit(:name, :description, :category_id, :status, :delivery_cost, :delivery_way, :prefecture_id, :delivery_date, :price).merge(seller_id: current_user.id)
+  end
+
+  def new_image_params
+    params[:new_images].permit({images: []})
   end
 
 end

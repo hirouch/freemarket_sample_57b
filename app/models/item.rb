@@ -1,6 +1,13 @@
 class Item < ApplicationRecord
-  belongs_to :user, foreign_key: 'user_id'
+  has_many :item_images, dependent: :destroy
+  accepts_nested_attributes_for :item_images
+  # belongs_to :user, foreign_key: 'user_id'
   belongs_to :category
+
+  belongs_to :seller ,class_name: "User", foreign_key: "seller_id"
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :prefecture
+
 
   enum status: { new_thing: 0, near_unused: 1, no_damage: 2, little_damage: 3, damage: 4, bad_thing: 5 }
   enum delivery_cost: { postage_included: 0, cash_on_delivery: 1 }

@@ -1,4 +1,4 @@
-= render "layouts/header"
+= render "shared/header"
 
 .ichi__exhibit
   .ichi__exhibit__own
@@ -7,10 +7,10 @@
     .ichi__exhibit__own__item
       .ichi__exhibit__own__item__images
         .ichi__exhibit__own__item__images__top
-          =image_tag @item.image, class: "ichi__exhibit__show__top__image"
+          = image_tag @item.item_images[0].image, class: "ichi__exhibit__show__top__image"
         .ichi__exhibit__own__item__images__others
           .ichi__exhibit__own__item__images__others__image
-            =image_tag src= @item.image, class: "ichi__exhibit__show__images"
+            = image_tag @item.item_images[0].image, class: "ichi__exhibit__show__images"
           .ichi__exhibit__own__item__images__others__image
           .ichi__exhibit__own__item__images__others__image
           .ichi__exhibit__own__item__images__others__image
@@ -71,28 +71,28 @@
           .ichi__exhibit__own__item__description__text__left
             商品の状態
           .ichi__exhibit__own__item__description__text__right
-            = @item.state
+            = @item.status_i18n
         .ichi__exhibit__own__item__description__text
           .ichi__exhibit__own__item__description__text__left
             配送料の負担
           .ichi__exhibit__own__item__description__text__right
-            = @item.postage
+            = @item.delivery_cost_i18n
         .ichi__exhibit__own__item__description__text
           .ichi__exhibit__own__item__description__text__left
             配送の方法
           .ichi__exhibit__own__item__description__text__right
-            楽々メルカリ便
+            = @item.delivery_way_i18n
         .ichi__exhibit__own__item__description__text
           .ichi__exhibit__own__item__description__text__left
             配送元地域
           .ichi__exhibit__own__item__description__text__right
             = link_to items_path, class: "link_to" do
-              = @item.region
+              = @item.prefecture.name
         .ichi__exhibit__own__item__description__text
           .ichi__exhibit__own__item__description__text__left
             発送日の目安
           .ichi__exhibit__own__item__description__text__right
-            = @item.shipping_date
+            = @item.delivery_date_i18n
     .ichi__exhibit__own__price
       .ichi__exhibit__own__price__left
         ¥
@@ -163,7 +163,7 @@
       = link_to item_path(item) do
         .ichi__exhibit__five__items__item
           .ichi__exhibit__five__items__item__image
-            =image_tag src = item.image, class: "ichi__exhibit__five__image"
+            =image_tag item.item_images[0].image, class: "ichi__exhibit__five__image"
           .ichi__exhibit__five__items__item__text
             .ichi__exhibit__five__items__item__text__top
               = item.name
@@ -187,7 +187,7 @@
       = link_to item_path(item) do
         .ichi__exhibit__five__items__item
           .ichi__exhibit__five__items__item__image
-            =image_tag src = item.image, class: "ichi__exhibit__five__image"
+            =image_tag item.item_images[0].image, class: "ichi__exhibit__five__image"
           .ichi__exhibit__five__items__item__text
             .ichi__exhibit__five__items__item__text__top
               = item.name
@@ -211,4 +211,4 @@
         テストテスト
 
 =render "shared/footertop"
-=render "layouts/footer"
+=render "shared/footer"

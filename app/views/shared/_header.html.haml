@@ -2,7 +2,7 @@
   .ichi__top
     .ichi__top__own
       .ichi__top__own__left
-        =image_tag src="mercari_logo.svg", class: "ichi__image__mercari"
+        = link_to image_tag("mercari_logo.svg", class: "ichi__image__mercari"), items_path
       .ichi__top__own__right
         .ichi__top__own__right__input
           %input{type: "text", class: 'ichi__search__item', placeholder:'何かお探しですか？'}

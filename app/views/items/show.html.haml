@@ -101,12 +101,15 @@
         （税込）
       .ichi__exhibit__own__price__right
         送料込み
-    .ichi__exhibit__own__purchase
-      = link_to items_path, class: "link_to_buy" do
-        購入画面に進む
+    -if @item.buyer_id.nil?
+      = link_to edit_purchase_path(@item), class: "link_to_buy" do
+        .ichi__exhibit__own__purchase
+          購入画面に進む
+    - else
+      .ichi__exhibit__own__sold
+        売り切れました
     .ichi__exhibit__own__text
       = @item.description
-
     .ichi__exhibit__own__contents
       .ichi__exhibit__own__contents__left
         .ichi__exhibit__own__contents__left__evaluation

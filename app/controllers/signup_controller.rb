@@ -30,7 +30,9 @@ class SignupController < ApplicationController
   end
 
   def step4
-    # sign_in User.find(session[:id]) unless user_signed_in?
+  end
+
+  def step5
   end
 
     def create
@@ -50,8 +52,8 @@ class SignupController < ApplicationController
     )
     @user.build_address(user_params[:address_attributes]) # 入力値を引数で渡す
     if @user.save
-        session[:user_id] = @user.id
-        redirect_to new_credit_card_path
+        session[:address_attributes] = @user.id
+        redirect_to step4_signup_index_url
       else
         render '/signup/step1'
       end

@@ -3,8 +3,9 @@ class CreditCardsController < ApplicationController
   require "payjp"
 
 
-
+ 
   def new
+    sign_in User.find(session[:id]) unless user_signed_in?
     card = CreditCard.where(user_id: current_user.id)
     redirect_to action: "show" if card.exists?
   end

@@ -1,0 +1,70 @@
+.haya-sinki-main {
+  height: 334px;
+}
+.haya-sinki-main__1 {
+  width: 700px;
+  margin: 0 auto;
+  height: 334px;
+  background-color: white;
+}
+.haya-sinki-main__1__2 {
+  font-size: 22px;
+  padding: 32px;
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 1px solid #e2e0e0;
+}
+.haya-sns-field {
+  padding: 24px 16px 40px;
+}
+.haya-sns-field__1 {
+  max-width: 343px;
+  height: 182px;
+  margin: 0 auto;
+}
+.haya-sns-field__1__email {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 343px;
+  height: 50px;
+  font-size: 14px;
+  line-height: 48px;
+  font-size: 14px;
+  display: block;
+  border-radius: 4px;
+}
+.haya-sns-field__1__face {
+  background: #385185;
+  border: 1px solid #385185;
+  color: #fff;
+  width: 343px;
+  height: 50px;
+  font-size: 14px;
+  line-height: 48px;
+  font-size: 14px;
+  display: block;
+  margin: 16px 0 0;
+  border-radius: 4px;
+}
+.haya-sns-field__1__gmail {
+  border: 1px solid #000000;
+  color: black;
+  width: 343px;
+  height: 50px;
+  font-size: 14px;
+  line-height: 48px;
+  font-size: 14px;
+  display: block;
+  margin: 16px 0 0;
+  border-radius: 4px;
+}
+.fa.fa-envelope-o {
+  margin: 0 50px 0 20px;
+}
+.fa.fa-facebook-square {
+  margin: 0 50px 0 20px;
+}
+.fa-google:before {
+  margin: 0 50px 0 20px;
+}

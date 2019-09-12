@@ -30,9 +30,11 @@ class SignupController < ApplicationController
   end
 
   def step4
+    sign_in User.find(session[:address_attributes]) unless user_signed_in?
   end
 
   def step5
+    sign_in User.find(session[:address_attributes]) unless user_signed_in?
   end
 
     def create

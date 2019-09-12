@@ -24,7 +24,14 @@ Rails.application.routes.draw do
   end
   root to: 'home#top'
 
-  resources :items
+  resources :items, only: [:new,:create,:show,:edit,:destroy] do
+    collection do
+      get "select", to: "items#select"
+      get "select_grand", to: "items#select_grand"
+      get "my_item/:id",to: "items#my_item"
+    end
+  end
+
   resources :categories, only: [:index]
   resources :purchases, only: [:edit, :update]
 

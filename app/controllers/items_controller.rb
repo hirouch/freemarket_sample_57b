@@ -30,19 +30,17 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    binding.pry
     @parents = Category.where(ancestry: nil)
     @item.save
-    # if @item.save 
-      # && new_image_params[:images][0] != ""
-      # new_image_params[:images].each do |image|
-      #   @item.item_images.create(image: image, item_id: @item.id)
-      # end
+    if @item.save && new_image_params[:images][0] != ""
+      new_image_params[:images].each do |image|
+        @item.item_images.create(image: image, item_id: @item.id)
+      end
       redirect_to root_path
-    # else
-    #   @item.item_images.build
-    #   render :new
-    # end
+    else
+      @item.item_images.build
+      render :new
+    end
   end
 
   def show
@@ -61,12 +59,40 @@ class ItemsController < ApplicationController
   def destroy
   end
 
+  def select
+    respond_to do |format|
+      format.html
+      format.json do
+        if params[:parent_id]
+          @children = Category.find(params[:parent_id]).children
+        else
+          @grand_children = Category.find(params[:child_id]).children
+        end
+      end
+    end
+  end
+
+  def select_grand
+    respond_to do |format|
+      format.html
+      format.json { @grand_children_info = Category.find(params[:grand_id]) }
+    end
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
+
+  private
+
   def item_params
     params.require(:item).permit(:name, :description, :category_id, :status, :delivery_cost, :delivery_way, :prefecture_id, :delivery_date, :price).merge(seller_id: current_user.id)
   end
 
   def new_image_params
-    params[:new_images].permit({images: []})
+    # binding.pry
+    params.require(:new_images).permit({images: []})
   end
 
   private 

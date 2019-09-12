@@ -1,24 +1,24 @@
 //= require turbolinks
 
 $(function() {
-  var dropzone = $(".sell-form__upload-box__dropbox__container");
-  var preview = $("#preview");
+  var dropzone = $(".kawa-sell-form__upload-box__dropbox__container");
+  var preview = $("#kawa-preview");
 
   var images = [];
   var new_image_files = [];
 
-  $(".sell-form__upload-box__dropbox").on("change", 'input[type= "file"]#upload-image', function() {
+  $(".kawa-sell-form__upload-box__dropbox").on("change", 'input[type= "file"]#kawa-upload-image', function() {
     var file = $(this).prop("files")[0];
     new_image_files.push(file);
     var reader = new FileReader();
 
-    var img = $(`<div class="add_img">
-                  <div class="img_area">
-                    <img class="image">
+    var img = $(`<div class="kawa-add_img">
+                  <div class="kawa-img_area">
+                    <img class="kawa-image">
                   </div>
                 </div>`);
-    var btn_wrapper = $(`<div class="btn_wrapper">
-                          <a class="btn_delete">全削除</a>
+    var btn_wrapper = $(`<div class="kawa-btn_wrapper">
+                          <a class="kawa-btn_delete">削除</a>
                         </div>`);
     img.append(btn_wrapper);
 
@@ -32,7 +32,7 @@ $(function() {
     images.push(img);
 
     if (images.length <= 4) {
-      $('#preview').empty();
+      $('#kawa-preview').empty();
       $.each(images, function(index, image) {
         image.data("image", index);
         preview.append(image);
@@ -41,7 +41,7 @@ $(function() {
         "width": `calc(100% - (20% * ${images.length}))`
       })
     } else if (images.length == 5) {
-      $("#preview").empty();
+      $("#kawa-preview").empty();
       $.each(images, function(index, image) {
         image.data("image", index);
         preview.append(image);
@@ -52,8 +52,7 @@ $(function() {
     }
   })
 
-  $(".sell-form__upload-box__dropbox").on("click", ".btn_delete", function() {
-
+  $(".kawa-sell-form__upload-box__dropbox").on("click", ".kawa-btn_delete", function() {
     var target_image = $(this).parent().parent();
     var target_image_num = target_image.data("image");
 
@@ -67,7 +66,7 @@ $(function() {
       })
     }
     if (images.length <= 4) {
-      $("#preview").empty();
+      $("#kawa-preview").empty();
       $.each(images, function(index, image) {
         image.data("image", index);
         preview.append(image);
@@ -77,7 +76,7 @@ $(function() {
         "display": "block"
       })
     } else if (images.length == 5) {
-      $("#preview").empty();
+      $("#kawa-preview").empty();
       $.each(images, function(index, image) {
         image.data("image", index);
         preview.append(image);

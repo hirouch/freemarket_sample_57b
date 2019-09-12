@@ -28,6 +28,10 @@
         -@womenitems.each do |item|
           .ichi__main__three__box__items__item
             = link_to item_path(item) do
+              -if item.buyer_id.present?
+                .ichi__main__three__box__items__item__sold
+                .ichi__main__three__box__items__item__soldtext
+                  SOLD
               .ichi__main__three__box__items__item__image
               = image_tag item.item_images[0].image, class: "ichi__item__image"
               .ichi__main__three__box__items__item__price

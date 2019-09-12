@@ -1,15 +1,18 @@
+= render "shared/items_header"
+
 .ichi__items__buy
   .ichi__items__buy__one
     購入内容の確認
   .ichi__items__buy__two
     .ichi__items__buy__two__title
       .ichi__items__buy__two__title__image
-        =image_tag src="https://static.mercdn.net/thumb/photos/m33182135715_1.jpg?1567224137", class: "ichi__item__buy__image"
+        =image_tag @item.item_images[0].image, class: "ichi__item__buy__image"
       .ichi__items__buy__two__title__name
-        P コート サイズM
+        = @item.name
     .ichi__items__buy__two__price
       .ichi__items__buy__two__price__number
-        ¥1,000
+        ¥
+        = @item.price.to_s(:delimited, delimiter: ',')
       .ichi__items__buy__two__price__text
         送料込み
     .ichi__items__buy__two__point
@@ -18,20 +21,31 @@
       .ichi__items__buy__two__payment__text
         支払い金額
       .ichi__items__buy__two__payment__number
-        ¥1,000
-    .ichi__items__buy__two__confirmation
-      配送先と支払い方法の入力お完了してください。
-
-    .ichi__items__buy__two__buy
-      購入する
+        ¥
+        = @item.price.to_s(:delimited, delimiter: ',')
+    -# .ichi__items__buy__two__confirmation
+    -#   配送先と支払い方法の入力お完了してください。
+    = link_to purchase_path(@item), method: :patch do
+      .ichi__items__buy__two__buy
+        購入する
   .ichi__items__buy__three
     .ichi__items__buy__three__text
       配送先
     .ichi__items__buy__three__address
       .ichi__items__buy__three__address__top
-        〒123-4567<br>
-        愛知県名古屋市中村区名駅1丁目１<br>
-        市川貴教
+        〒
+        = @address.address_number
+        <br>
+        = @address.address_prefecture
+        = @address.address_name
+        = @address.address_block
+        = @address.address_building
+        = @address.address_phone_number
+        <br>
+        = @user.last_name
+        = @user.first_name
+
+
     .ichi__items__buy__three__change
       .ichi__items__buy__three__change__text
         変更する
@@ -48,3 +62,4 @@
       .ichi__items__buy__three__change__icon
         =fa_icon 'chevron-right'
 
+= render "shared/signup-footer"

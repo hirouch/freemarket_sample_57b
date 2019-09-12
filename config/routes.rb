@@ -26,6 +26,7 @@ Rails.application.routes.draw do
 
   resources :items
   resources :categories, only: [:index]
+  resources :purchases, only: [:edit, :update]
 
 
   resource :mypages do

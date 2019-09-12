@@ -65,17 +65,18 @@
         font-size: 28px;
       }
     }
-    &__confirmation {
-      margin-top: 8px;
-      font-size: 14px;
-      text-align: center;
-      color: red;
-    }
+    // &__confirmation {
+    //   margin-top: 8px;
+    //   font-size: 14px;
+    //   text-align: center;
+    //   color: red;
+    // }
     &__buy {
+      margin-top: 8px;
       line-height: 50px;
       height: 50px;
       text-align: center;
-      background-color: #888;
+      background-color: red;
       color: white;
       font-weight: 600;
       margin-bottom: 40px;

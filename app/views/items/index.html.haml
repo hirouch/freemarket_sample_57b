@@ -29,12 +29,12 @@
           .ichi__main__three__box__items__item
             = link_to item_path(item) do
               .ichi__main__three__box__items__item__image
-              = image_tag src = item.image, class: "ichi__item__image"
+              = image_tag item.item_images[0].image, class: "ichi__item__image"
               .ichi__main__three__box__items__item__price
                 ¥
                 = item.price.to_s(:delimited, delimiter: ',')
               .ichi__main__three__box__items__item__text
-                = item.name
+                = item.name 
 
     .ichi__main__three__box
       .ichi__main__three__box__top
@@ -47,7 +47,7 @@
           .ichi__main__three__box__items__item
             = link_to item_path(item) do
               .ichi__main__three__box__items__item__image
-              = image_tag src = item.image, class: "ichi__item__image"
+              = image_tag item.item_images[0].image, class: "ichi__item__image"
               .ichi__main__three__box__items__item__price
                 ¥
                 = item.price.to_s(:delimited, delimiter: ',')
@@ -65,7 +65,7 @@
           = link_to item_path(item) do
             .ichi__main__three__box__items__item
               .ichi__main__three__box__items__item__image
-              = image_tag src = item.image, class: "ichi__item__image"
+              = image_tag item.item_images[0].image, class: "ichi__item__image"
               .ichi__main__three__box__items__item__price
                 ¥
                 = item.price.to_s(:delimited, delimiter: ',')
@@ -83,7 +83,7 @@
           = link_to item_path(item) do
             .ichi__main__three__box__items__item
               .ichi__main__three__box__items__item__image
-              = image_tag src = item.image, class: "ichi__item__image"
+              = image_tag item.item_images[0].image, class: "ichi__item__image"
               .ichi__main__three__box__items__item__price
                 ¥
                 = item.price.to_s(:delimited, delimiter: ',')
@@ -114,7 +114,7 @@
           = link_to item_path(item) do
             .ichi__main__three__box__items__item
               .ichi__main__three__box__items__item__image
-              = image_tag src = item.image, class: "ichi__item__image"
+              = image_tag item.item_images[0].image, class: "ichi__item__image"
               .ichi__main__three__box__items__item__price
                 ¥
                 = item.price.to_s(:delimited, delimiter: ',')
@@ -132,7 +132,7 @@
           = link_to item_path(item) do
             .ichi__main__three__box__items__item
               .ichi__main__three__box__items__item__image
-              = image_tag src = item.image, class: "ichi__item__image"
+              = image_tag item.item_images[0].image, class: "ichi__item__image"
               .ichi__main__three__box__items__item__price
                 ¥
                 = item.price.to_s(:delimited, delimiter: ',')
@@ -150,7 +150,7 @@
           = link_to item_path(item) do
             .ichi__main__three__box__items__item
               .ichi__main__three__box__items__item__image
-              = image_tag src = item.image, class: "ichi__item__image"
+              = image_tag item.item_images[0].image, class: "ichi__item__image"
               .ichi__main__three__box__items__item__price
                 ¥
                 = item.price.to_s(:delimited, delimiter: ',')
@@ -168,7 +168,7 @@
           = link_to item_path(item) do
             .ichi__main__three__box__items__item
               .ichi__main__three__box__items__item__image
-              = image_tag src = item.image, class: "ichi__item__image"
+              = image_tag item.item_images[0].image, class: "ichi__item__image"
               .ichi__main__three__box__items__item__price
                 ¥
                 = item.price.to_s(:delimited, delimiter: ',')

@@ -9,10 +9,10 @@ class ItemsController < ApplicationController
     @menitems = Item.where(category_id: 91..144).order(id: "DESC").limit(10)
     @electricalitems = Item.where(category_id: 408..435).order(id: "DESC").limit(10)
     @toyitems = Item.where(category_id: 306..371).order(id: "DESC").limit(10)
-    @chanelitems = Item.where(brand: "Chanel").order(id: "DESC").limit(10)
-    @louisvuittonitems = Item.where(brand: "Louisvuitton").order(id: "DESC").limit(10)
-    @supremeitems = Item.where(brand: "Supreme").order(id: "DESC").limit(10)
-    @nikeitems = Item.where(brand: "Nike").order(id: "DESC").limit(10)
+    @chanelitems = Item.where(brand: "シャネル").order(id: "DESC").limit(10)
+    @louisvuittonitems = Item.where(brand: "ルイヴィトン").order(id: "DESC").limit(10)
+    @supremeitems = Item.where(brand: "シュプリーム").order(id: "DESC").limit(10)
+    @nikeitems = Item.where(brand: "ナイキ").order(id: "DESC").limit(10)
   end
 
   def new
@@ -46,7 +46,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
+    # @item = Item.find(params[:id])
     @selleritems = Item.where(seller_id: @item.seller_id).order(id: "DESC").limit(6)
     @branditems = Item.where(brand: @item.brand).order(id: "DESC").limit(6)
     @user = User.find(@item.seller_id)
@@ -69,4 +69,8 @@ class ItemsController < ApplicationController
     params[:new_images].permit({images: []})
   end
 
+  private 
+  def set_item
+    @item = Item.find(params[:id])
+  end
 end

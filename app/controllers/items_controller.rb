@@ -30,7 +30,6 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    # binding.pry
     @parents = Category.where(ancestry: nil)
     @item.save
     if @item.save && new_image_params[:images][0] != ""

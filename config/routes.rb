@@ -24,8 +24,6 @@ Rails.application.routes.draw do
   end
   root to: 'home#top'
 
-  # resources :items
-
   resources :items, only: [:new,:create,:show,:edit,:destroy] do
     collection do
       get "select", to: "items#select"

@@ -20,14 +20,13 @@ Rails.application.routes.draw do
       get 'step3'
       get 'step4' # ここで、入力の全てが終了する
       get 'step5'
-      get 'step6'
     end
   end
   root to: 'home#top'
 
   resources :items
   resources :categories, only: [:index]
-  
+
 
   resource :mypages do
     resource :profile ,only: [:show]
@@ -35,7 +34,7 @@ Rails.application.routes.draw do
     resource :information ,only: [:show]
   end
 
-  
+
   resources :credit_cards, only: [:new, :show] do
     collection do
       post 'show', to: 'credit_cards#show'

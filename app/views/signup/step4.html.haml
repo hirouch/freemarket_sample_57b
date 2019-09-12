@@ -91,6 +91,7 @@
             %br/
             %input.haya-input カード背面４桁もしくは３桁の番号
           .haya-field
-            %button.hayabtn-1botta
-              次に進む
+            = button_to "次に進む", {controller: 'signup', action: 'step5'}, {method: :get, class: "hayabtn-1"}
     = render "shared/signup-footer"
+
+    -# a.haya-nxet_step4{:href => "/signup/step5"} 次に進む

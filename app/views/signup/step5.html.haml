@@ -32,5 +32,9 @@
         %br/
         会員登録が完了しました。
       -# = button_to "メルカリを始める", controller: 'home', action: 'top', class: 'haya-merukari-btn'
-      %button.haya-merukari-btn{:onclick => "location.href='./top.html'"} メルカリを始める
+      -# %button.haya-merukari-btn{:onclick => "location.href='./items_path'"} メルカリを始める
+      = button_to "メルカリを始める", {controller: 'items', action: 'index'}, {method: :get, class: "haya-merukari-btn"}
+  = render "shared/footertop"
+  = render "shared/signup-footer"
+
 

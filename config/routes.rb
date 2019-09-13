@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'items#index'
+
   get 'information/show'
 
   get 'logouts/show'

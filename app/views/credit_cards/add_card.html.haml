@@ -1,0 +1,15 @@
+= render "shared/header"
+.kawa-wrapper
+  .kawa-container
+    = render "shared/side-bar"
+    .haya-cre-main
+      %section.haya-cre__main__1__2
+        .haya-l-chapter-head
+          支払い方法
+        .haya-l-single-inner
+          .haya-l-single-inner__1
+            .haya-l-single-inner__1__2
+              クレジットカード一覧
+        .haya-settings-add-card
+          .haya-settings-add-card__1
+            = button_to "クレジットカードを追加する", {controller: 'credit_cards', action: 'new'}, {method: :get, class: "haya-merukari-btn"}

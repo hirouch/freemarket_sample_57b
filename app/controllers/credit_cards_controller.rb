@@ -52,8 +52,8 @@ class CreditCardsController < ApplicationController
       @default_card_information = customer.cards.retrieve(card.card_id)
     end
   end
+
+  def add_card
 end
 
-
-
-
+end

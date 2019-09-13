@@ -63,3 +63,42 @@
   background:red;
   z-index: 10;
   }
+
+
+  .haya-cre__main__1__2{
+    width: 700px;
+    margin: 0 auto;
+    height: 383px;
+    background-color: white;
+  }
+
+  .haya-l-chapter-head{
+    font-size: 24px;
+    padding: 20px 4%;
+    border-bottom: 1px solid #f5f5f5;
+    text-align: center;
+    height: 30px;
+    font-weight: bold;
+  }
+
+  .haya-l-single-inner{
+    padding: 64px 120px 0 64px;
+    &__1{
+    &__2{
+      max-width: 320px;
+      margin: 0 auto;
+      font-weight: bold;
+      font-size: 18px
+    }
+  }
+  }
+
+  .haya-credit-btn {
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    width: 343px;
+    height: 50px;
+    font-size: 14px;
+    margin: 30px 0 0 160px;
+  }

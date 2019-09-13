@@ -79,7 +79,7 @@
           発送元・お届け先住所変更
           %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "", class: "side-links" do
+        = link_to get_credit_cards_url, class: "side-links", :method => 'get' do
           お支払情報変更
           %i.fa.fa-angle-right
       %li.side-bar__link-box

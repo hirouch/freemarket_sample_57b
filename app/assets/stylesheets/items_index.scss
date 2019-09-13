@@ -94,9 +94,6 @@ body {
             height: 28px;
             line-height: 28px;
           }
-          &__text {
-            padding: 10px 10px;
-          }
         }
       }
     }
@@ -132,6 +129,7 @@ body {
     font-size: 22px;
     color: white;
     text-align: center;
+    text-decoration: none;
   }
   &__camera {
     height: 54px;
@@ -154,4 +152,10 @@ body {
 .link_to_buy {
   text-decoration: none;
   color: white;
+}
+
+.ichi__main__three__box__items__item__text {
+  color: rgb(100, 100, 100);
+  padding: 10px 0px;
+  font-size: 15px;
 }

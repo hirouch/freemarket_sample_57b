@@ -25,7 +25,7 @@
         = @item.price.to_s(:delimited, delimiter: ',')
     -# .ichi__items__buy__two__confirmation
     -#   配送先と支払い方法の入力お完了してください。
-    = link_to purchase_path(@item), method: :patch do
+    = link_to purchase_path(@item), method: :patch, class: "link__to__buy" do
       .ichi__items__buy__two__buy
         購入する
   .ichi__items__buy__three

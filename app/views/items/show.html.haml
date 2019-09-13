@@ -101,7 +101,7 @@
         （税込）
       .ichi__exhibit__own__price__right
         送料込み
-    -if @user = current_user
+    -if @user == current_user
       .ichi__exhibit__own__text
         = @item.description
       = link_to edit_item_path(@item), class: "link_to_buy" do

@@ -1,7 +1,9 @@
 .kawa-top-header
   = render "shared/header"
 %nav.kawa-second-header
-  %ul.kawa-second-header__box
+  %ul.pankuzu
+    - breadcrumb :logout
+    = breadcrumbs separator: " &rsaquo; " 
     -# - breadcrumb :logout
     -# = breadcrumbs pretext: "",separator: " &rsaquo; ", class: "bread"
 .kawa-wrapper#kawa-background

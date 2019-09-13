@@ -1,0 +1,22 @@
+
+
+.pankuzu{
+  max-width: none;
+  overflow: visible;
+  white-space: normal;
+  height: 49px;
+  background-color: white;
+.breadcrumbs{
+    width: 700px;
+    padding: 16px;
+    a{
+      color: #333;
+      margin: 0 5px;
+      text-decoration: inherit;
+      vertical-align: inherit
+    }
+    span{
+      font-weight: 600;
+    }
+  }
+}

@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   end
 
   resources :categories, only: [:index]
-  resources :purchases, only: [:edit, :update]
+  resources :purchases, only: [:index, :edit, :update]
 
 
   resource :mypages do

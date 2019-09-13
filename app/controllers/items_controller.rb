@@ -56,6 +56,8 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    @item.destroy
+    redirect_to controller: 'purchases', action: 'index'
   end
 
   def select

@@ -2,11 +2,12 @@
   %nav.mypage-nav
     %ul.mypage-nav__list
       %li.side-bar__link-box
-        = link_to "", class: "side-links" do
+        -# = link_to "", class: "side-links" do
+        = link_to mypages_show_path, class: "side-links", :method => 'get' do
           マイページ
           %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "", class: "side-links" do
+        = link_to profiles_show_path, class: "side-links", :method => 'get' do
           お知らせ
           %i.fa.fa-angle-right
       %li.side-bar__link-box
@@ -18,7 +19,7 @@
           いいね！一覧
           %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "", class: "side-links" do
+        = link_to  new_item_url, class: "side-links", :method => 'get' do
           出品する
           %i.fa.fa-angle-right
       %li.side-bar__link-box
@@ -70,7 +71,7 @@
       設定
     %ul.mypage-nav__list
       %li.side-bar__link-box
-        = link_to "", class: "side-links" do
+        = link_to mypages_profile_url, class: "side-links", :method => 'get' do
           プロフィール
           %i.fa.fa-angle-right
       %li.side-bar__link-box
@@ -86,7 +87,7 @@
           メール/パスワード
           %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "", class: "side-links" do
+        = link_to  mypages_information_url, class: "side-links", :method => 'get' do
           本人確認
           %i.fa.fa-angle-right
       %li.side-bar__link-box
@@ -94,6 +95,6 @@
           電話番号の確認
           %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "", class: "side-links" do
+        = link_to  logouts_show_url, class: "side-links", :method => 'get' do
           ログアウト
           %i.fa.fa-angle-right

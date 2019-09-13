@@ -2,6 +2,9 @@
 .kawa-top-header
 -#   = render "shared/header"
 %nav.kawa-second-header
+%ul.pankuzu
+  - breadcrumb :mypage, class: "pankuzu"
+  = breadcrumbs separator: " &rsaquo; "
   %ul.kawa-second-header__box
     -# - breadcrumb :mypage
     -# = breadcrumbs pretext: "",separator: " &rsaquo; ", class: "bread"

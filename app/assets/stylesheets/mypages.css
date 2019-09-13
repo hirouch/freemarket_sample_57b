@@ -1,0 +1,140 @@
+﻿.kawa-second-header {
+  width: 100%;
+  background-color: #f5f5f5;
+  border-top: 1px solid #eee;
+  background-color: white;
+}
+.kawa-second-header__box {
+  margin: 0 auto;
+  padding: 0px 200px 0px 0px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.16);
+  font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic",
+    "メイリオ", "Meiryo", sans-serif;
+  box-sizing: border-box;
+}
+.kawa-second-header__box .kawa-breadcrumbs {
+  font-weight: bold;
+}
+.kawa-second-header__box .kawa-bread {
+  color: gray;
+  font-size: 20px;
+}
+.kawa-second-header__box .kawa-bread a {
+  text-decoration: none;
+  font-weight: normal;
+  color: black;
+  font-size: 14px;
+}
+.kawa-second-header__box .kawa-bread a:hover {
+  text-decoration: underline;
+  color: gray;
+}
+.kawa-second-header__box .kawa-bread .kawa-current {
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+}
+#kawa-backside {
+  background-color: #f5f5f5;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding-top: 10px;
+  background-repeat: no-repeat;
+}
+#kawa-backside .kawa-container {
+  width: 1020px;
+  margin: 40px auto 0;
+  padding: 0 0 40px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic",
+    "メイリオ", "Meiryo", sans-serif;
+}
+#kawa-backside .kawa-container .kawa-right-content {
+  float: right;
+  width: 700px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic",
+    "メイリオ", "Meiryo", sans-serif;
+}
+#kawa-backside .kawa-container .kawa-right-content .kawa-mypage-user-icon {
+  height: 200px;
+  background-image: image-url("user-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#kawa-backside
+  .kawa-container
+  .kawa-right-content
+  .kawa-mypage-user-icon
+  .kawa-mypage-icon {
+  text-decoration: none;
+  color: black;
+}
+#kawa-backside
+  .kawa-container
+  .kawa-right-content
+  .kawa-mypage-user-icon
+  .kawa-mypage-icon:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+  z-index: 2;
+}
+#kawa-backside
+  .kawa-container
+  .kawa-right-content
+  .kawa-mypage-user-icon
+  .kawa-image {
+  border-radius: 50%;
+}
+#kawa-backside
+  .kawa-container
+  .kawa-right-content
+  .kawa-mypage-user-icon__name {
+  font-size: 14px;
+  margin: 8px 0;
+  font-weight: bold;
+}
+#kawa-backside .kawa-container .kawa-right-content .kawa-mypage-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#kawa-backside
+  .kawa-container
+  .kawa-right-content
+  .kawa-mypage-number__gedgement {
+  font-size: 14px;
+  margin-right: 15px;
+}
+#kawa-backside
+  .kawa-container
+  .kawa-right-content
+  .kawa-mypage-number__gedgement__num {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+#kawa-backside .kawa-container .kawa-right-content .kawa-mypage-number__number {
+  font-size: 14px;
+  margin-right: 15px;
+}
+#kawa-backside
+  .kawa-container
+  .kawa-right-content
+  .kawa-mypage-number__number__num {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}

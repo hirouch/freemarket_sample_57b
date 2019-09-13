@@ -1,6 +1,9 @@
 = render 'shared/header'
 -# - breadcrumb :information
 -# = render "shared/breadcrumbs"
+%ul.pankuzu
+  - breadcrumb :information, class: "pankuzu"
+  = breadcrumbs separator: " &rsaquo; "
 %main.kawa-card-main.kawa-container
   = render 'shared/side-bar'
   .kawa-card

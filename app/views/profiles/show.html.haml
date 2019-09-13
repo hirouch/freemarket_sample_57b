@@ -2,8 +2,10 @@
 -#   = render "shared/header"
 %nav.kawa-second-header
   %ul.kawa-second-header__box
-    -# - breadcrumb :profile
-    -# = breadcrumbs class: "bread",separator: " &rsaquo; "
+%nav.kawa-second-header
+%ul.pankuzu
+  - breadcrumb :profiles, class: "pankuzu"
+  = breadcrumbs separator: " &rsaquo; "
 .kawa-wrapper#kawa-background
   .kawa-container.kawa-clearfix
     = render "shared/side-bar"

@@ -65,12 +65,6 @@
         font-size: 28px;
       }
     }
-    // &__confirmation {
-    //   margin-top: 8px;
-    //   font-size: 14px;
-    //   text-align: center;
-    //   color: red;
-    // }
     &__buy {
       margin-top: 8px;
       line-height: 50px;
@@ -94,6 +88,7 @@
       margin: auto;
       font-size: 14px;
       font-weight: bold;
+      text-decoration: none;
     }
     &__address {
       width: 320px;
@@ -130,4 +125,8 @@
 .ichi__item__buy__image {
   width: 64px;
   height: 64px;
+}
+
+.link__to__buy {
+  text-decoration: none;
 }

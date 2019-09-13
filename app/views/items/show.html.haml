@@ -101,34 +101,46 @@
         （税込）
       .ichi__exhibit__own__price__right
         送料込み
-    -if @item.buyer_id.nil?
-      = link_to edit_purchase_path(@item), class: "link_to_buy" do
+    -if @user = current_user
+      .ichi__exhibit__own__text
+        = @item.description
+      = link_to edit_item_path(@item), class: "link_to_buy" do
         .ichi__exhibit__own__purchase
-          購入画面に進む
+          商品の編集
+      .ichi__exhibit__own__or
+        or
+      = link_to item_path(@item), method: :delete, class: "link_to_buy" do
+        .ichi__exhibit__own__sold
+          この商品を削除する
     - else
-      .ichi__exhibit__own__sold
-        売り切れました
-    .ichi__exhibit__own__text
-      = @item.description
-    .ichi__exhibit__own__contents
-      .ichi__exhibit__own__contents__left
-        .ichi__exhibit__own__contents__left__evaluation
-          .ichi__exhibit__own__contents__left__evaluation__icon
-            =fa_icon 'heart'
-          .ichi__exhibit__own__contents__left__evaluation__good
-            いいね!
-          .ichi__exhibit__own__contents__left__evaluation__point
-            150
-        .ichi__exhibit__own__contents__left__report
-          .ichi__exhibit__own__contents__left__report__icon
-            =fa_icon 'flag'
-          .ichi__exhibit__own__contents__left__report__text
-            不適切な商品の報告
-      .ichi__exhibit__own__contents__right
-        .ichi__exhibit__own__contents__right__icon
-          =fa_icon 'lock'
-        .ichi__exhibit__own__contents__right__text
-          あんしん・あんぜんへの取り組み
+      -if @item.buyer_id.nil?
+        = link_to edit_purchase_path(@item), class: "link_to_buy" do
+          .ichi__exhibit__own__purchase
+            購入画面に進む
+      - else
+        .ichi__exhibit__own__sold
+          売り切れました
+        .ichi__exhibit__own__text
+          = @item.description
+        .ichi__exhibit__own__contents
+          .ichi__exhibit__own__contents__left
+            .ichi__exhibit__own__contents__left__evaluation
+              .ichi__exhibit__own__contents__left__evaluation__icon
+                =fa_icon 'heart'
+              .ichi__exhibit__own__contents__left__evaluation__good
+                いいね!
+              .ichi__exhibit__own__contents__left__evaluation__point
+                150
+            .ichi__exhibit__own__contents__left__report
+              .ichi__exhibit__own__contents__left__report__icon
+                =fa_icon 'flag'
+              .ichi__exhibit__own__contents__left__report__text
+                不適切な商品の報告
+          .ichi__exhibit__own__contents__right
+            .ichi__exhibit__own__contents__right__icon
+              =fa_icon 'lock'
+            .ichi__exhibit__own__contents__right__text
+              あんしん・あんぜんへの取り組み
 
   .ichi__exhibit__two
     .ichi__exhibit__two__text
@@ -163,7 +175,7 @@
         さんのその他の出品
     .ichi__exhibit__five__items
     -@selleritems.each do |item|
-      = link_to item_path(item) do
+      = link_to item_path(item), class: "link__to__show" do
         .ichi__exhibit__five__items__item
           .ichi__exhibit__five__items__item__image
             =image_tag item.item_images[0].image, class: "ichi__exhibit__five__image"
@@ -187,7 +199,7 @@
         のその他の商品
     .ichi__exhibit__five__items
     -@branditems.each do |item|
-      = link_to item_path(item) do
+      = link_to item_path(item), class: "link__to__show" do
         .ichi__exhibit__five__items__item
           .ichi__exhibit__five__items__item__image
             =image_tag item.item_images[0].image, class: "ichi__exhibit__five__image"

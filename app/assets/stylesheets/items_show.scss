@@ -230,6 +230,7 @@
     font-weight: bold;
     color:  #0099e8;
     margin-bottom: 8px;
+    text-decoration: none;
     }
     &__items {
       display: flex;
@@ -354,6 +355,13 @@
   margin-right: 10px;
 }
 
-.aaa {
+.link__to__show {
   text-decoration: none;
+  color: rgb(100, 100, 100);
+}
+
+.ichi__exhibit__own__or {
+  padding: 30px 0px 20px 0px;
+  font-size: 25px;
+  text-align: center
 }

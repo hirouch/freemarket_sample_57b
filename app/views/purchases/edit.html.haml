@@ -23,11 +23,17 @@
       .ichi__items__buy__two__payment__number
         ¥
         = @item.price.to_s(:delimited, delimiter: ',')
-    -# .ichi__items__buy__two__confirmation
-    -#   配送先と支払い方法の入力お完了してください。
-    = link_to purchase_path(@item), method: :patch, class: "link__to__buy" do
-      .ichi__items__buy__two__buy
+    - if @card.blank?
+      .ichi__items__buy__two__confirmation
+        配送先と支払い方法の入力お完了してください。
+      .ichi__items__buy__two__nobuy
         購入する
+    - else
+      = link_to purchase_path(@item), method: :patch, class: "link__to__buy" do
+        .ichi__items__buy__two__buy
+          購入する
+
+
   .ichi__items__buy__three
     .ichi__items__buy__three__text
       配送先
@@ -45,21 +51,24 @@
         = @user.last_name
         = @user.first_name
 
-
-    .ichi__items__buy__three__change
-      .ichi__items__buy__three__change__text
-        変更する
-      .ichi__items__buy__three__change__icon
-        =fa_icon 'chevron-right'
+    = link_to items_path, class: "ichi_change" do
+      .ichi__items__buy__three__change
+        .ichi__items__buy__three__change__text
+          変更する
+        .ichi__items__buy__three__change__icon
+          =fa_icon 'chevron-right'
   .ichi__items__buy__four
     .ichi__items__buy__four__text
       支払い方法
     .ichi__items__buy__four__card
-      <br><br><br>
-    .ichi__items__buy__three__change
-      .ichi__items__buy__three__change__text
-        変更する
-      .ichi__items__buy__three__change__icon
-        =fa_icon 'chevron-right'
+      **** **** **** 
+      = @default_card_information.last4
+      = @exp_month + " / " + @exp_year
+    = link_to new_credit_card_path, class: "ichi_change" do
+      .ichi__items__buy__three__change
+        .ichi__items__buy__three__change__text
+          変更する
+        .ichi__items__buy__three__change__icon
+          =fa_icon 'chevron-right'
 
 = render "shared/signup-footer"

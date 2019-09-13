@@ -65,12 +65,18 @@
         font-size: 28px;
       }
     }
-    &__buy {
+    &__confirmation {
+      line-height: 30px;
+      height: 30px;
+      color: red;
+      text-align: center;
+    }
+    &__nobuy {
       margin-top: 8px;
       line-height: 50px;
       height: 50px;
       text-align: center;
-      background-color: red;
+      background-color: gray;
       color: white;
       font-weight: 600;
       margin-bottom: 40px;
@@ -119,6 +125,12 @@
       font-size: 14px;
       font-weight: bold;
     }
+    &__card {
+      height: 70px;
+      line-height: 70px;
+      width: 320px;
+      margin: auto;
+    }
   }
 }
 
@@ -128,5 +140,25 @@
 }
 
 .link__to__buy {
+  text-decoration: none;
+}
+
+
+.ichi__items__buy__two__buy {
+  margin-top: 8px;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 40px;
+  width: 320px;
+  margin: auto;
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+
+.ichi_change {
   text-decoration: none;
 }

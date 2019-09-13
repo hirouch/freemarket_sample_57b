@@ -50,6 +50,7 @@ Rails.application.routes.draw do
       post 'show', to: 'credit_cards#show'
       post 'pay', to: 'credit_cards#pay'
       post 'delete', to: 'credit_cards#delete'
+      get  'get'  ,  to: 'credit_cards#add_card'
     end
   end
 

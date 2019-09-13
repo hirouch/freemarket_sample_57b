@@ -2,6 +2,10 @@ class PurchasesController < ApplicationController
 
   require 'payjp'
 
+
+  def index
+  end
+
   def edit
     @item = Item.find(params[:id])
     @user = User.find(current_user)

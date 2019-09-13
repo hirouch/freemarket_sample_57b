@@ -8,6 +8,7 @@
 .pankuzu .breadcrumbs {
   width: 700px;
   padding: 16px;
+  margin: 0 0 0 180px;
 }
 .pankuzu .breadcrumbs a {
   color: #333;

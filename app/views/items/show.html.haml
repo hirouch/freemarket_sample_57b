@@ -109,7 +109,7 @@
           商品の編集
       .ichi__exhibit__own__or
         or
-      = link_to item_path(@item), method: :delete, class: "link_to_buy" do
+      = link_to item_path(@item), method: :delete, data: { confirm: '商品の出品を取り消してもよろしいですか？' }, class: "link_to_buy" do
         .ichi__exhibit__own__sold
           この商品を削除する
     - else

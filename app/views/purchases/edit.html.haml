@@ -60,10 +60,14 @@
   .ichi__items__buy__four
     .ichi__items__buy__four__text
       支払い方法
-    .ichi__items__buy__four__card
-      **** **** **** 
-      = @default_card_information.last4
-      = @exp_month + " / " + @exp_year
+    -if @card.present?
+      .ichi__items__buy__four__card
+        **** **** **** 
+        = @default_card_information.last4
+        = @exp_month + " / " + @exp_year
+    - else
+      .ichi__items__buy__four__card
+        <br><br><br>
     = link_to new_credit_card_path, class: "ichi_change" do
       .ichi__items__buy__three__change
         .ichi__items__buy__three__change__text

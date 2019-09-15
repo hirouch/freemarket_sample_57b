@@ -1,11 +1,12 @@
 $(function(){
   $(document).on('mouseover','.ichi__top__two__left__category', function(){
-    $('.ichi__categories__parent').fadeIn(0001);
+    $('.ichi__categories__parent').show();
   });
 
   function buildChildHTML(child){
-    var html =`<a class="child_category" id="${child.id}" 
-                href="/category/${child.id}">${child.name}</a>`;
+    // var html =`<a class="child_category" id="${child.id}" 
+    //             href="/category/${child.id}">${child.name}</a>`;
+    var html =`<div class="child_category" id="${child.id}">${child.name}</div>`;
     return html;
   }
   $(document).on("mouseover", ".ichi__category", function() {
@@ -29,8 +30,9 @@ $(function(){
 
 
   function buildGrandChildHTML(child){
-    var html =`<a class="grand_child_category" id="${child.id}"
-              href="/category/${child.id}">${child.name}</a>`;
+    // var html =`<a class="grand_child_category" id="${child.id}"
+    //           href="/category/${child.id}">${child.name}</a>`;
+    var html =`<div class="grand_child_category" id="${child.id}">${child.name}</div>`;
     return html;
   }
   $(document).on("mouseover", ".child_category", function () {
@@ -53,13 +55,36 @@ $(function(){
     });
   });
 
+  $(document).on("mouseover", ".grand_child_category", function () {
+    var id = this.id
+    $(".ichi_gray_category").removeClass("ichi_gray_category");
+    $('#' + id).addClass("ichi_gray_category");
+  });
+
+
+
   $(document).on('mouseover','.ichi__main', function(){
-    $('.ichi__categories__parent').fadeOut(0001);
+    $('.ichi__categories__parent').hide();
     $('.child_category').remove();
     $('.grand_child_category').remove();
   });
   $(document).on('mouseover','.ichi__top__own', function(){
-    $('.ichi__categories__parent').fadeOut(0001);
+    $('.ichi__categories__parent').hide();
+    $('.child_category').remove();
+    $('.grand_child_category').remove();
+  });
+  $(document).on('mouseover','.ichi__exhibit', function(){
+    $('.ichi__categories__parent').hide();
+    $('.child_category').remove();
+    $('.grand_child_category').remove();
+  });
+  $(document).on('mouseover','.pankuzu', function(){
+    $('.ichi__categories__parent').hide();
+    $('.child_category').remove();
+    $('.grand_child_category').remove();
+  });
+  $(document).on('mouseover','.kawa-wrapper', function(){
+    $('.ichi__categories__parent').hide();
     $('.child_category').remove();
     $('.grand_child_category').remove();
   });

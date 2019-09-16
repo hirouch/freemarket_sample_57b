@@ -17,10 +17,12 @@
       &__images {
         width: 300px;
         height: 420px;
+        overflow: hidden;
         &__top {
           height: 300px;
           width: 300px;
           text-align: center;
+          display: flex;
         }
         &__others {
           height: 120px;

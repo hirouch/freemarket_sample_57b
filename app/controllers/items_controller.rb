@@ -47,6 +47,7 @@ class ItemsController < ApplicationController
     @selleritems = Item.where(seller_id: @item.seller_id).order(id: "DESC").limit(6)
     @branditems = Item.where(brand: @item.brand).order(id: "DESC").limit(6)
     @user = User.find(@item.seller_id)
+    @images = ItemImage.where(item_id: @item.id)
   end
 
   def edit

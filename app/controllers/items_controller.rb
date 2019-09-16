@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  before_action :set_item, only: [:show, :edit, :destroy, :my_item, :buy_confirm]
+  before_action :set_item, only: [:show, :edit, :update, :destroy, :my_item, :buy_confirm]
   # before_action :authenticate_user!, only: [:new]
 
   def index
@@ -38,7 +38,7 @@ class ItemsController < ApplicationController
       end
       redirect_to root_path
     else
-      @item.item_images.build
+      @item.item_images.buildparam
       render :new
     end
   end
@@ -50,9 +50,25 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @grands = @item.category.root
+    @grands_sib = @grands.siblings
+
+    @parents1 = @item.category.parent
+    @parents_sib =@parents1.siblings
+
+    @category = @item.category
+    @category_sib = @item.category.siblings
+
+    @parents = Category.where(ancestry: nil) #Category.where(ancestry = ?, "nil")
+    @item.item_images.build
   end
 
   def update
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      redirect_to action: 'edit'
+    end
   end
 
   def destroy
@@ -92,7 +108,6 @@ class ItemsController < ApplicationController
   end
 
   def new_image_params
-    # binding.pry
     params.require(:new_images).permit({images: []})
   end
 

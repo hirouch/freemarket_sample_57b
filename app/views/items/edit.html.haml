@@ -1,0 +1,144 @@
+.kawa-sell-body
+  .kawa-sell-page-container
+    .kawa-sell-header
+      = render "shared/items_header"
+      -# %h1.kawa-sell-header__box
+      -#   = link_to root_path, class:"kawa-sell-header__box__link" do
+      -#     = image_tag "logo.svg", class:"kawa-sell-header__box__link__image", alt:"mercari"
+    .kawa-sell-main
+      .kawa-item-container
+        .kawa-sell-container
+          .kawa-sell-inner
+            %h2.kawa-sell-inner__description
+              商品の情報を入力
+            = form_for @item do |f|
+              .kawa-sell-form__upload-box
+                %h3.kawa-sell-form__upload-box__head
+                  出品画像
+                  %span.kawa-sell-form__upload-box__head__require
+                    必須
+                %p.kawa-sell-form__upload-box__explain
+                  最大5枚までアップロードできます
+                  = f.fields_for :item_images, @item.item_images do |image|
+                    .kawa-sell-form__upload-box__dropbox
+                      #kawa-preview
+                      .kawa-sell-form__upload-box__dropbox__container
+                        = image.label :image, for: "kawa-upload-image" do
+                          .kawa-sell-form__upload-box__dropbox__container__list
+                            = image.file_field :image,multiple: "multiple", id:"kawa-upload-image", 'kawa-data-image': 0
+                          .kawa-sell-form__upload-box__dropbox__container__frame
+                            %pre.kawa-sell-form__upload-box__dropbox__container__frame__explain
+                              ドラッグアンドドロップ
+                              またはクリックしてファイルをアップロード
+              .kawa-sell-form__content
+                .kawa-sell-form__content__group--first
+                  .kawa-sell-form__content__group__name
+                    商品名
+                    %span.kawa-sell-form__content__group__name__require
+                      必須
+                  = f.text_field :name, class: "kawa-sell-form__content__group__input", placeholder: "商品名（必須 40文字まで）"
+                .kawa-sell-form__content__group
+                  .kawa-sell-form__content__group__name
+                    商品の説明
+                    %span.kawa-sell-form__content__group__name__require
+                      必須
+                  = f.text_area :description, class: "kawa-sell-form__content__group__text", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+              .kawa-sell-form__content--non-first
+                %h3.kawa-sell-form__content__head
+                  商品の詳細
+                .kawa-sell-form__content__box
+                  .kawa-sell-form__content__box__group--first
+                    .kawa-sell-form__content__box__group__name
+                      カテゴリー
+                      %span.kawa-sell-form__content__box__group__name__require
+                        必須
+                    .kawa-sell-form__content__box__group__select
+                      = fa_icon 'chevron-down', class:"kawa-arrow-bottom"
+                      = f.collection_select :category_id, @grands_sib, :id, :name, {prompt: "---", selected: @grands.id}, class: "kawa-sell-form__content__box__group__select__wrap", id: "kawa-parent-form", name: "item[category_id]"
+                      = f.hidden_field :category_id, id:"kawa-cate_id", value:""
+                    .kawa-sell-form__content__box__group__select#child-container
+                      = fa_icon 'chevron-down', class:"kawa-arrow-bottom"
+                      = f.collection_select :category_id, @parents_sib, :id, :name, {prompt: "---", selected: @parents1.id}, class: "kawa-sell-form__content__box__group__select__wrap", id: "kawa-parent-form", name: "item[category_id]"
+                      -# = f.hidden_field :category_id, id:"kawa-cate_id", value:""
+                    .kawa-sell-form__content__box__group__select#grandchild-container
+                      = fa_icon 'chevron-down', class:"kawa-arrow-bottom"
+                      = f.collection_select :category_id, @category_sib, :id, :name, {prompt: "---", selected: @category.id}, class: "kawa-sell-form__content__box__group__select__wrap", id: "kawa-parent-form", name: "item[category_id]"
+                      -# = f.hidden_field :category_id, id:"kawa-cate_id", value:""
+                  .kawa-sell-form__content__box__group
+                    .kawa-sell-form__content__box__group__name
+                      商品の状態
+                      %span.kawa-sell-form__content__box__group__name__require
+                        必須
+                    .kawa-sell-form__content__box__group__select
+                      = fa_icon 'chevron-down', class:"kawa-arrow-bottom"
+                      = f.select :status, Item.statuses_i18n.keys.map { |k| [Item.statuses_i18n[k], k]} , {prompt: "---"} ,class: "kawa-sell-form__content__box__group__select__wrap"
+              .kawa-sell-form__content--non-first
+                %h3.kawa-sell-form__content__head
+                  配送について
+                = link_to "", class:"kawa-sell-form__content__question" do
+                  ?
+                .kawa-sell-form__content__box
+                  .kawa-sell-form__content__box__group--first
+                    .kawa-sell-form__content__box__group__name
+                      配送料の負担
+                      %span.kawa-sell-form__content__box__group__name__require
+                        必須
+                    .kawa-sell-form__content__box__group__select
+                      = fa_icon 'chevron-down', class:"kawa-arrow-bottom"
+                      = f.select :delivery_cost, Item.delivery_costs_i18n.keys.map { |k| [Item.delivery_costs_i18n[k], k]}, {prompt: "---"}, class: "kawa-sell-form__content__box__group__select__wrap"
+                  .kawa-sell-form__content__box__group
+                    .kawa-sell-form__content__box__group__name
+                      配送の方法
+                      %span.kawa-sell-form__content__box__group__name__require
+                        必須
+                    .kawa-sell-form__content__box__group__select
+                      = fa_icon 'chevron-down', class:"kawa-arrow-bottom"
+                      = f.select :delivery_way, Item.delivery_ways_i18n.keys.map { |k| [Item.delivery_ways_i18n[k], k]}, {prompt: "---"}, class:"kawa-sell-form__content__box__group__select__wrap"
+                  .kawa-sell-form__content__box__group
+                    .kawa-sell-form__content__box__group__name
+                      発送元の地域
+                      %span.kawa-sell-form__content__box__group__name__require
+                        必須
+                    .kawa-sell-form__content__box__group__select
+                      = fa_icon 'chevron-down', class:"kawa-arrow-bottom"
+                      = f.collection_select :prefecture_id, Prefecture.all, :id, :name, {prompt: "---"}, class:"kawa-sell-form__content__box__group__select__wrap"
+                  .kawa-sell-form__content__box__group
+                    .kawa-sell-form__content__box__group__name
+                      発送までの日数
+                      %span.kawa-sell-form__content__box__group__name__require
+                        必須
+                    .kawa-sell-form__content__box__group__select
+                      = fa_icon 'chevron-down', class:"kawa-arrow-bottom"
+                      = f.select :delivery_date, Item.delivery_dates_i18n.keys.map { |k| [Item.delivery_dates_i18n[k], k]}, {prompt: "---"}, class: "kawa-sell-form__content__box__group__select__wrap"
+              .kawa-sell-form__content--non-first
+                %h3.kawa-sell-form__content__head
+                  販売価格(300~9,999,999)
+                = link_to "", class:"kawa-sell-form__content__question" do
+                  ?
+                .kawa-sell-form__content__box
+                  %ul.kawa-sell-form__content__box__price
+                    %li.kawa-sell-form__content__box__price__group
+                      .kawa-sell-form__content__box__price__group__clearfix
+                        .kawa-sell-form__content__box__price__group__clearfix__name
+                          価格
+                          %span.kawa-sell-form__content__box__price__group__clearfix__name__require
+                            必須
+                        .kawa-sell-form__content__box__price__group__clearfix__input-box
+                          .kawa-sell-form__content__box__price__group__clearfix__input-box__yen
+                            ¥
+                          = f.text_field :price, id: "price_form", class: "kawa-sell-form__content__box__price__group__clearfix__input-box__frame", placeholder: "例）300"
+                    %li.kawa-sell-form__content__box__price__clearfix
+                      .kawa-sell-form__content__box__price__clearfix__name
+                        販売手数料（10%）
+                      .kawa-sell-form__content__box__price__clearfix__fee -
+                    %li.kawa-sell-form__content__box__price__bold
+                      .kawa-sell-form__content__box__price__bold__name
+                        販売利益
+                      .kawa-sell-form__content__box__price__bold__benefit -
+              .kawa-sell-form__content--non-first
+                .kawa-sell-form__content__container
+                .kawa-sell-form__content__button
+                = f.submit "変更する", class:'kawa-sell-form__content__button'
+                = link_to "",class:"kawa-sell-form__content__back-button" do
+                  もどる
+      = render "shared/signup-footer"

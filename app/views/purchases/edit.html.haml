@@ -29,7 +29,7 @@
       .ichi__items__buy__two__nobuy
         購入する
     - else
-      = link_to purchase_path(@item), method: :patch, class: "link__to__buy" do
+      = link_to purchase_path(@item), method: :patch, data: { confirm: '商品を購入しますか？' }, class: "link__to__buy" do
         .ichi__items__buy__two__buy
           購入する
 

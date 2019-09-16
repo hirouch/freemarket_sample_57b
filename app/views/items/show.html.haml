@@ -7,19 +7,12 @@
     .ichi__exhibit__own__item
       .ichi__exhibit__own__item__images
         .ichi__exhibit__own__item__images__top
-          = image_tag @item.item_images[0].image, class: "ichi__exhibit__show__top__image"
+          = image_tag @item.item_images[0].image, class: "ichi__exhibit__show__top__image", id: @item.id
         .ichi__exhibit__own__item__images__others
-          .ichi__exhibit__own__item__images__others__image
-            = image_tag @item.item_images[0].image, class: "ichi__exhibit__show__images"
-          .ichi__exhibit__own__item__images__others__image
-          .ichi__exhibit__own__item__images__others__image
-          .ichi__exhibit__own__item__images__others__image
-          .ichi__exhibit__own__item__images__others__image
-          .ichi__exhibit__own__item__images__others__image
-          .ichi__exhibit__own__item__images__others__image
-          .ichi__exhibit__own__item__images__others__image
-          .ichi__exhibit__own__item__images__others__image
-          .ichi__exhibit__own__item__images__others__image
+          -@images.each do |image|
+            .ichi__exhibit__own__item__images__others__image
+              = image_tag image.image, id: image.id, class: "ichi__exhibit__show__images"
+
       .ichi__exhibit__own__item__description
         .ichi__exhibit__own__item__description__text
           .ichi__exhibit__own__item__description__text__left

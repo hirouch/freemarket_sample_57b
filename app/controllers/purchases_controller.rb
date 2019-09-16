@@ -32,6 +32,6 @@ class PurchasesController < ApplicationController
   )
 
     @item.update(buyer_id: current_user.id)
-    redirect_to controller: 'items', action: 'index'
+    redirect_to controller: 'purchases', action: 'index'
   end
 end

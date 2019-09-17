@@ -10,21 +10,33 @@
             %spa.haya-field__hissu 必須
             %br/
             = f.text_field :nickname, class: "haya-input", :placeholder => "メルカリ太朗"
+            - @user.errors.full_messages_for(:nickname).each do |message|
+              .error-message
+                = message
           .haya-field
             = f.label :メールアドレス
             %spa.haya-field__hissu 必須
             %br/
             = f.text_field :email, class: "haya-input", :placeholder => "PC・携帯どちらでも可"
+            - @user.errors.full_messages_for(:email).each do |message|
+              .error-message
+                = message
           .haya-field
             = f.label :パスワード
             %spa.haya-field__hissu 必須
             %br/
-            = f.text_field :password, class: "haya-input", :placeholder => "7文字以上"
+            = f.password_field :password, class: "haya-input", :placeholder => "7文字以上"
+            - @user.errors.full_messages_for(:password).each do |message|
+              .error-message
+                = message
           .haya-field
             = f.label :パスワード（確認）
             %spa.haya-field__hissu 必須
             %br/
-            = f.text_field :password_confirmation, class: "haya-input", :placeholder => "7文字以上"
+            = f.password_field :password_confirmation, class: "haya-input", :placeholder => "7文字以上"
+            - @user.errors.full_messages_for(:password_confirmation).each do |message|
+              .error-message
+                = message
           .haya-field
             .haya-field__honnin
               本人確認
@@ -35,13 +47,25 @@
             %spa.haya-field__hissu 必須
             %br/
             = f.text_field :last_name, class: "haya-sei-mei", :placeholder => "例）山田"
+            - @user.errors.full_messages_for(:last_name).each do |message|
+              .error-message
+                = message
             = f.text_field :first_name, class: "haya-sei-mei", :placeholder => "例）彩"
+            - @user.errors.full_messages_for(:first_name).each do |message|
+              .error-message
+                = message
           .haya-field
             = f.label :お名前かなカナ（全角）
             %spa.haya-field__hissu 必須
             %br/
             = f.text_field :last_name_kana, class: "haya-sei-mei", :placeholder => "例）ヤマダ"
+            - @user.errors.full_messages_for(:last_name_kana).each do |message|
+              .error-message
+                = message
             = f.text_field :first_name_kana, class: "haya-sei-mei", :placeholder => "例）アヤ"
+            - @user.errors.full_messages_for(:first_name_kana).each do |message|
+              .error-message
+                = message
           .haya-field
             = f.label :生年月日
             %spa.haya-field__hissu 必須
@@ -172,6 +196,9 @@
                   %option{:value => "2019"} 2019
                   %option{:value => "2020"} 2020
                 %spa 年
+                - @user.errors.full_messages_for(:birthdate_year).each do |message|
+                  .error-message
+                    = message
                 = f.select :birthdate_month do
                   %option{:value => ""} -
                   %option{:value => "1"} 1
@@ -187,6 +214,9 @@
                   %option{:value => "11"} 11
                   %option{:value => "12"} 12
                 %spa 月
+                - @user.errors.full_messages_for(:birthdate_month).each do |message|
+                  .error-message
+                    = message
                 = f.select :birthdate_day do
                   %option{:value => ""} -
                   %option{:value => "1"} 1
@@ -221,6 +251,9 @@
                   %option{:value => "30"} 30
                   %option{:value => "31"} 31
                 %spa 日
+                - @user.errors.full_messages_for(:birthdate_day).each do |message|
+                  .error-message
+                    = message
           .haya-field__kome
             ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
         .haya-content

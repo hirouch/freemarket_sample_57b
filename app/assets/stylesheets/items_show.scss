@@ -306,8 +306,16 @@
   object-fit: cover;
 }
 
-.ichi__evaluation__icon {
+.ichi__evaluation__icon__red {
   font-size: 16px;
+  margin-right: 5px;
+  color: red;
+}
+
+.ichi__evaluation__icon__blue {
+  font-size: 16px;
+  margin-right: 5px;
+  color: blue;
 }
 
 .ichi__exhibit__message {

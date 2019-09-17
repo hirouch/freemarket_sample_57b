@@ -1,12 +1,25 @@
 ja:
   activerecord:
     models:
+      user: ユーザー
       item: 商品情報
     attributes:
       item:
         status: 商品の状態
         delivery_cost: 配送料の負担
         delivery_date: 発送までの日数
+      user:
+        nickname: ニックネーム
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: 確認用のパスワード
+        last_name: 姓
+        first_name: 名
+        last_name_kana: 姓カナ
+        first_name_kana: 名カナ
+        birthdate_year: 年
+        birthdate_month: 月
+        birthdate_day: 日
   enums:
     item:
       status:

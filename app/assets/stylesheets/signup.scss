@@ -26,7 +26,6 @@ body{
 }
 
 .haya-single-main__container{
-  height: 1260px;
   width: 700px;
   margin: 0 auto;
   background-color: #fff
@@ -45,7 +44,6 @@ body{
   padding: 24px 16px 40px
 }
 .haya-field{
-  height: 70px;
   width: 343px;
   margin: 24px 0 0;
   &__kome{
@@ -155,5 +153,11 @@ label{
   display: inline
 }
 
+.field_with_errors{
+  display: inline;
+}
 
-
+.error-message{
+  color: red;
+  margin: 10px 0 0 0;
+}

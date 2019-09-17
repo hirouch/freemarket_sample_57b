@@ -30,14 +30,17 @@
             .haya-phone-5
               携帯電話携帯電話の番号
             = f.telephone_field :phone_number, class: "haya-input", :placeholder => "携帯電話の番号を入力"
-          .haya-phon-kome
-            本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-          .haya-sns-form
-            = f.submit class:"hayabtn-1", value: "SNSを送信する"
-          %p.haya-phone-kome-2
-            ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
-          .haya-denwa
-            %p.haya-riyuu
-              電話番号の確認が必要な理由
-              %i.haya-icon-arrow
+            - @user.errors.full_messages_for(:phone_number).each do |message|
+              .error-message
+                = message
+            .haya-phon-kome
+              本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+            .haya-sns-form
+              = f.submit class:"hayabtn-1", value: "SNSを送信する"
+            %p.haya-phone-kome-2
+              ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+            .haya-denwa
+              %p.haya-riyuu
+                電話番号の確認が必要な理由
+                %i.haya-icon-arrow
   = render "shared/signup-footer"

@@ -39,7 +39,8 @@ end
   def step3
     session[:phone_number] = user_params[:phone_number]
     @user = User.new( phone_number: session[:phone_number])# 新規インスタンス作成
-    @user = User.new # 新規インスタンス作成
+    # render '/signup/step2' unless @user.valid?(:step3)
+    # session[:phone_number] = user_params[:phone_number]
     @user.build_address
   end
 

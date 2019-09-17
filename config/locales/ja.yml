@@ -20,6 +20,7 @@ ja:
         birthdate_year: 年
         birthdate_month: 月
         birthdate_day: 日
+        phone_number: 電話番号
   enums:
     item:
       status:

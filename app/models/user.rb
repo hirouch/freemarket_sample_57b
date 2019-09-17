@@ -1,20 +1,20 @@
 class User < ApplicationRecord
   VALID_EMAIL_REGEX =                 /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  VALID_EMAIL_LAST_NAME =                 /\A[一-龥ぁ-ん]/
-  VALID_EMAIL_LAST_NAME_KANA =                 /\A[ァ-ヶー－]+\z/
-  VALID_EMAIL_PHONE_NUMBER =                 /\A\d{10,11}\z/
+  VALID_LAST_NAME =                 /\A[一-龥ぁ-ん]/
+  VALID_LAST_NAME_KANA =                 /\A[ァ-ヶー－]+\z/
+  VALID_PHONE_NUMBER =                 /\A\d{10,11}\z/
   validates :nickname,                presence: true, length: {maximum: 20}, on: :step2
   validates :email,                   presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }, on: :step2
   validates :password,                presence: true, length: {minimum: 7, maximum: 128}, on: :step2
   validates :password_confirmation,   presence: true, length: {minimum: 7, maximum: 128}, on: :step2
-  validates :last_name,               presence: true, on: :step2
-  validates :first_name,              presence: true, on: :step2
-  validates :last_name_kana,          presence: true, on: :step2
-  validates :first_name_kana,         presence: true, on: :step2
+  validates :last_name,               presence: true, format: { with: VALID_LAST_NAME }, on: :step2
+  validates :first_name,              presence: true, format: { with: VALID_LAST_NAME }, on: :step2
+  validates :last_name_kana,          presence: true, format: { with: VALID_LAST_NAME_KANA },on: :step2
+  validates :first_name_kana,         presence: true, format: { with: VALID_LAST_NAME_KANA },on: :step2
   validates :birthdate_year,          presence: true, on: :step2
   validates :birthdate_month,         presence: true, on: :step2
   validates :birthdate_day,           presence: true, on: :step2
-  validates :phone_number,            uniqueness: true, format: { with: VALID_EMAIL_PHONE_NUMBER }, on: :step3
+  validates :phone_number,            presence: true, on: :step3
 
 
   # Include default devise modules. Others available are:

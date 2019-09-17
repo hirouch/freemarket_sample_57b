@@ -9,9 +9,9 @@
         .ichi__exhibit__own__item__images__top
           = image_tag @item.item_images[0].image, class: "ichi__exhibit__show__top__image", id: @item.id
         .ichi__exhibit__own__item__images__others
-          -@images.each do |image|
+          -@images.each_with_index do |image, i|
             .ichi__exhibit__own__item__images__others__image
-              = image_tag image.image, id: image.id, class: "ichi__exhibit__show__images"
+              = image_tag image.image, id: i, class: "ichi__exhibit__show__images"
 
       .ichi__exhibit__own__item__description
         .ichi__exhibit__own__item__description__text
@@ -23,17 +23,13 @@
                 = @user.nickname
             .ichi__exhibit__own__item__description__text__right__evaluation
               .ichi__exhibit__own__item__description__text__right__evaluation__icon
-                = fa_icon 'thumbs-up', class: "ichi__evaluation__icon"
+                = fa_icon 'thumbs-up', class: "ichi__evaluation__icon__red"
               .ichi__exhibit__own__item__description__text__right__evaluation__point
                 100 
               .ichi__exhibit__own__item__description__text__right__evaluation__icon
-                = fa_icon 'thumbs-up', class: "ichi__evaluation__icon"
+                = fa_icon 'thumbs-down', class: "ichi__evaluation__icon__blue"
               .ichi__exhibit__own__item__description__text__right__evaluation__point
-                100
-              .ichi__exhibit__own__item__description__text__right__evaluation__icon
-                = fa_icon 'thumbs-up', class: "ichi__evaluation__icon"
-              .ichi__exhibit__own__item__description__text__right__evaluation__lastpoint
-                100
+                0
         .ichi__exhibit__own__item__description__text
           .ichi__exhibit__own__item__description__text__left
             カテゴリー

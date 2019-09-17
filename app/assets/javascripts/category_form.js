@@ -33,7 +33,7 @@ $(function() {
     )
   }
 
-  $("#kawa-parent-form").on("change",function() {
+  $(document).on("change","#kawa-parent-form",function() {
     var parentValue = $(this).val();
     $("#child-container, #grandchild-container").remove();
     $.ajax({

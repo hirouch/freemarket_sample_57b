@@ -33,6 +33,7 @@
   font-size: 14px;
   display: block;
   border-radius: 4px;
+  text-decoration: none;
 }
 .haya-sns-field__1__face {
   background: #385185;
@@ -47,6 +48,9 @@
   margin: 16px 0 0;
   border-radius: 4px;
 }
+.haya-sns-field__1__face__2 .fa {
+  margin: 0 60px 0 20px;
+}
 .haya-sns-field__1__gmail {
   border: 1px solid #000000;
   color: black;
@@ -58,6 +62,9 @@
   display: block;
   margin: 16px 0 0;
   border-radius: 4px;
+}
+.haya-sns-field__1__gmail__2 .fa {
+  margin: 0 60px 0 20px;
 }
 .fa.fa-envelope-o {
   margin: 0 50px 0 20px;

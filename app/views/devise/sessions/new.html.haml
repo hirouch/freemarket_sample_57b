@@ -16,9 +16,9 @@
   .haya-login-form-inner
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .haya-field-sns
-      = f.email_field :email, autofocus: true, autocomplete: "email", class:"haya-field-sns__1"
+      = f.email_field :email, autofocus: true, autocomplete: "email", class:"haya-field-sns__1",:placeholder => "メールアドレス"
     .haya-field-sns
-      = f.password_field :password, autocomplete: "current-password", class:"haya-field-sns__1"
+      = f.password_field :password, autocomplete: "current-password", class:"haya-field-sns__1",:placeholder => "パスワード"
     .haya-form-group-sns
       %div.hayahaya
         %iframe.haya-lobobo{:frameborder => "0", :height => "78", :name => "a-bgafe3sxe03j", :role => "presentation", :sandbox => "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", :scrolling => "no", :src => "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1565591531251&size=normal&cb=ogvf3j15h9jl", :width => "304"}    %button.login-submit.btn-default.btn-red{:type => "submit"} ログイン

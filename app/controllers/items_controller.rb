@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :show]
   before_action :set_item, only: [:show, :edit, :update, :destroy, :my_item, :buy_confirm]
+  before_action :authenticate_user!, only: [:new, :show]
 
   def index
     # @items = Item.all.order(id: "DESC").limit(10)
